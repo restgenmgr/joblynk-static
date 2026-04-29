@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JobLynk.live – Executive Digital Resources</title>
-    <meta name="description" content="Executive career resources for hospitality and maritime professionals in India, Middle East, and international markets. Job guides, salary benchmarks, and employer connections.">
-    <meta name="keywords" content="hospitality jobs, maritime careers, cruise line operations, luxury hotels, F&B management, front office, housekeeping, culinary arts, revenue management, HR training, engineering, wellness spa, retail casino">
-    <meta name="author" content="Nigel Thomas">
-    <link rel="canonical" href="https://joblynk.live/">
+    <title>Employers Portal – JobLynk.live</title>
+    <meta name="description" content="Employers portal – post job openings, find talent. Current opportunities in Hungary and other locations.">
+    <meta name="keywords" content="employers portal, job postings, Hungary jobs, recruitment">
+    <meta name="author" content="JobLynk.live">
+    <link rel="canonical" href="https://joblynk.live/employers-portal.html">
     <meta name="google-adsense-account" content="ca-pub-4282121192943910">
     
     <!-- Google Analytics (GA4) -->
@@ -23,26 +23,181 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4282121192943910" crossorigin="anonymous"></script>
     
     <style>
-        *{margin:0;padding:0;box-sizing:border-box;}
-        body{font-family:'Segoe UI',Roboto,sans-serif;background:#f0f4f8;color:#1a2a3a;line-height:1.6;}
-        .navbar{background:#0f2b3d;padding:1rem 0;position:sticky;top:0;z-index:1000;}
-        .nav-container{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:0 20px;flex-wrap:wrap;}
-        .logo{color:white;font-size:1.5rem;font-weight:bold;text-decoration:none;}
-        .nav-links{display:flex;gap:1rem;flex-wrap:wrap;}
-        .nav-links a{color:white;text-decoration:none;padding:8px 16px;border-radius:8px;transition:background 0.3s;}
-        .nav-links a:hover{background:#2c7da0;}
-        .header{background:linear-gradient(135deg,#0f2b3d,#1e4a6e);color:white;padding:2rem;text-align:center;}
-        .header h1{font-size:2rem;margin-bottom:0.5rem;}
-        .container{max-width:1200px;margin:2rem auto;padding:0 20px;}
-        h2{color:#0f2b3d;margin-bottom:1rem;}
-        .sector-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin:2rem 0;}
-        .sector-card{background:white;border-radius:16px;padding:1.5rem;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,0.05);transition:transform 0.2s;cursor:pointer;}
-        .sector-card:hover{transform:translateY(-5px);background:#f8fafc;}
-        .sector-card a{text-decoration:none;font-weight:bold;color:#1e4a6e;font-size:1.2rem;display:block;}
-        .sector-card p{color:#666;margin-top:0.5rem;font-size:0.9rem;}
-        .footer{background:#0f1a24;color:#8899aa;text-align:center;padding:2rem;margin-top:2rem;}
-        .footer a{color:#8899aa;margin:0 0.5rem;text-decoration:none;}
-        @media(max-width:768px){.nav-container{flex-direction:column;gap:10px;}}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            background: #f0f4f8;
+            color: #1a2a3a;
+            line-height: 1.5;
+        }
+        .navbar {
+            background: #0f2b3d;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            flex-wrap: wrap;
+        }
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .nav-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+        .nav-links a:hover {
+            background: #2c7da0;
+        }
+        .header {
+            background: linear-gradient(135deg, #0f2b3d, #1e4a6e);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        .container {
+            max-width: 1300px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        .portal-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+        .frame {
+            background: white;
+            border-radius: 24px;
+            padding: 1.5rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+        .frame:hover {
+            transform: translateY(-5px);
+        }
+        .frame h3 {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #1e4a6e;
+            border-left: 4px solid #2c7da0;
+            padding-left: 12px;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        .frame .job-list {
+            flex: 1;
+        }
+        .frame ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .frame li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.2rem;
+            position: relative;
+        }
+        .frame li::before {
+            content: "•";
+            color: #2c7da0;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        .contact-info {
+            background: #eef4ff;
+            border-radius: 16px;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+        .contact-info p {
+            margin: 0.3rem 0;
+        }
+        .service-charge {
+            font-size: 0.8rem;
+            color: #b8860b;
+            font-weight: bold;
+            margin-top: 0.8rem;
+            text-align: center;
+            background: #fff2db;
+            padding: 0.4rem;
+            border-radius: 20px;
+        }
+        .placeholder {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            min-height: 250px;
+        }
+        .placeholder-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            opacity: 0.5;
+        }
+        .placeholder h4 {
+            color: #4a6e8a;
+            margin-bottom: 0.5rem;
+        }
+        .placeholder p {
+            color: #6c8eaa;
+            font-size: 0.9rem;
+        }
+        .footer {
+            background: #0f1a24;
+            color: #8899aa;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+        .footer a {
+            color: #8899aa;
+            margin: 0 0.5rem;
+            text-decoration: none;
+        }
+        @media (max-width: 900px) {
+            .portal-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 600px) {
+            .portal-grid {
+                grid-template-columns: 1fr;
+            }
+            .nav-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -56,33 +211,103 @@
             <a href="/pay-portal.html">Pay Portal</a>
             <a href="/leader.html">Leader</a>
             <a href="/blog.html">Blog</a>
+            <a href="/employers-portal.html">Employers</a>
             <a href="/privacy.html">Privacy</a>
             <a href="/terms.html">Terms</a>
         </div>
     </div>
 </nav>
 <div class="header">
-    <h1>🚀 JobLynk.live</h1>
-    <p>Executive Digital Resources for the Modern Indian Professional</p>
-    <p style="margin-top:0.5rem; font-size:0.9rem;">LIVE: 20+ New HR Leads Verified Today</p>
+    <h1>🏢 Employers Portal</h1>
+    <p>Post job openings • Find verified talent • Direct employer connections</p>
 </div>
 <div class="container">
-    <h2>📌 Select Your Executive Sector</h2>
-    <div class="sector-grid">
-        <div class="sector-card"><a href="/cruise-line-operations.html">🚢 Cruise Line Operations</a><p>Complete career guide for Indian seafarers</p></div>
-        <div class="sector-card"><a href="/luxury-hotels-india.html">🏨 Luxury Hotels - India</a><p>Top hotel chains, salaries, career paths</p></div>
-        <div class="sector-card"><a href="/middle-east-hospitality.html">🕌 Middle East Hospitality</a><p>Dubai, Qatar, Saudi career opportunities</p></div>
-        <div class="sector-card"><a href="/fb-management.html">🍽️ F&B Management</a><p>Restaurants, QSR, cloud kitchens</p></div>
-        <div class="sector-card"><a href="/front-office-excellence.html">⭐ Front Office Excellence</a><p>Guest relations, reservations, management</p></div>
-        <div class="sector-card"><a href="/housekeeping-admin.html">🧹 Housekeeping Admin</a><p>Standards, KPIs, career progression</p></div>
-        <div class="sector-card"><a href="/culinary-arts.html">👨‍🍳 Culinary Arts</a><p>Chef roles, salaries, top institutes</p></div>
-        <div class="sector-card"><a href="/revenue-sales.html">📊 Revenue & Sales</a><p>Hotel revenue management, sales careers</p></div>
-        <div class="sector-card"><a href="/hr-training.html">👥 HR & Training</a><p>Recruitment, compliance, development</p></div>
-        <div class="sector-card"><a href="/engineering-tech.html">🔧 Engineering & Tech</a><p>Maintenance, IT, facilities management</p></div>
-        <div class="sector-card"><a href="/maritime-deck.html">⚓ Maritime Deck Dept</a><p>Deck officers, ratings, certifications</p></div>
-        <div class="sector-card"><a href="/maritime-engine.html">⚙️ Maritime Engine Dept</a><p>Marine engineers, engine ratings</p></div>
-        <div class="sector-card"><a href="/wellness-spa.html">💆 Wellness & Spa</a><p>Spa management, therapist careers</p></div>
-        <div class="sector-card"><a href="/retail-casino.html">🛍️ Retail & Casino</a><p>Hotel retail, duty-free, casino ops</p></div>
+    <div class="portal-grid">
+        <!-- Frame 1: Hungary Jobs -->
+        <div class="frame">
+            <h3>🇭🇺 Jobs in Hungary</h3>
+            <div class="job-list">
+                <ul>
+                    <li><strong>City:</strong> Budapest (Capital)</li>
+                    <li><strong>3 Waiters</strong></li>
+                    <li><strong>2 Cooks (Indian)</strong></li>
+                    <li><strong>1 Assistant Manager</strong></li>
+                    <li><strong>1 Chef (Continental)</strong></li>
+                </ul>
+                <div class="contact-info">
+                    <p><strong>📞 Urgent Openings</strong></p>
+                    <p>Contact: <strong>Sudhir Tiwari</strong></p>
+                    <p>📱 Cel: <a href="tel:+917058150484">70581 50484</a></p>
+                </div>
+                <div class="service-charge">
+                    ⚠️ Placement Agent – Service Charges Applicable
+                </div>
+            </div>
+        </div>
+
+        <!-- Frame 2 – Placeholder -->
+        <div class="frame placeholder">
+            <div class="placeholder-icon">📌</div>
+            <h4>Your Job Here</h4>
+            <p>Post your vacancies<br>Contact us for details</p>
+            <a href="/contact.html" style="margin-top: 0.8rem;">Submit Opening →</a>
+        </div>
+
+        <!-- Frame 3 – Placeholder -->
+        <div class="frame placeholder">
+            <div class="placeholder-icon">🌍</div>
+            <h4>International Roles</h4>
+            <p>Middle East • Europe • Cruise Lines</p>
+            <a href="/contact.html">Enquire Now</a>
+        </div>
+
+        <!-- Frame 4 – Placeholder -->
+        <div class="frame placeholder">
+            <div class="placeholder-icon">🏨</div>
+            <h4>Luxury Hotels</h4>
+            <p>India • Dubai • Maldives</p>
+            <a href="/contact.html">List Openings</a>
+        </div>
+
+        <!-- Frame 5 – Placeholder -->
+        <div class="frame placeholder">
+            <div class="placeholder-icon">🚢</div>
+            <h4>Cruise Line Jobs</h4>
+            <p>Deck • Engine • F&B • Housekeeping</p>
+            <a href="/contact.html">View Opportunities</a>
+        </div>
+
+        <!-- Frame 6 – Placeholder -->
+        <div class="frame placeholder">
+            <div class="placeholder-icon">💻</div>
+            <h4>Tech & IT Roles</h4>
+            <p>Remote • Hybrid • Onsite</p>
+            <a href="/contact.html">Add Job Post</a>
+        </div>
+
+        <!-- Frame 7 – Placeholder -->
+        <div class="frame placeholder">
+            <div class="placeholder-icon">📊</div>
+            <h4>Sales & Marketing</h4>
+            <p>B2B • B2C • Digital Marketing</p>
+            <a href="/contact.html">Advertise Role</a>
+        </div>
+
+        <!-- Frame 8 – Placeholder -->
+        <div class="frame placeholder">
+            <div class="placeholder-icon">🔧</div>
+            <h4>Engineering & Maintenance</h4>
+            <p>Hotels • Cruise • Industrial</p>
+            <a href="/contact.html">Submit Vacancy</a>
+        </div>
+
+        <!-- Frame 9 – Placeholder -->
+        <div class="frame placeholder">
+            <div class="placeholder-icon">📞</div>
+            <h4>Become a Partner</h4>
+            <p>Recruitment agents • HR consultancies</p>
+            <a href="/contact.html">Collaborate</a>
+        </div>
     </div>
 </div>
 <div class="footer">
