@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employers Portal – JobLynk.live</title>
+    <meta name="description" content="Employers portal – post job openings, find talent. Current opportunities in Hungary and other locations.">
+    <meta name="keywords" content="employers portal, job postings, Hungary jobs, recruitment">
+    <meta name="author" content="JobLynk.live">
+    <link rel="canonical" href="https://joblynk.live/employers-portal.html">
+    <meta name="google-adsense-account" content="ca-pub-4282121192943910">
+    
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9LDB7E245Y"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-9LDB7E245Y');
+    </script>
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4282121192943910" crossorigin="anonymous"></script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            background: #f0f4f8;
+            color: #1a2a3a;
+            line-height: 1.5;
+        }
+        /* Navigation (matching your site) */
+        .navbar {
+            background: #0f2b3d;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            flex-wrap: wrap;
+        }
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .nav-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+        .nav-links a:hover {
+            background: #2c7da0;
+        }
+        .header {
+            background: linear-gradient(135deg, #0f2b3d, #1e4a6e);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        .container {
+            max-width: 1300px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        /* 3x3 Grid */
+        .portal-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+        .frame {
+            background: white;
+            border-radius: 24px;
+            padding: 1.5rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+        .frame:hover {
+            transform: translateY(-5px);
+        }
+        .frame h3 {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #1e4a6e;
+            border-left: 4px solid #2c7da0;
+            padding-left: 12px;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        .frame .job-list {
+            flex: 1;
+        }
+        .frame ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .frame li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.2rem;
+            position: relative;
+        }
+        .frame li::before {
+            content: "•";
+            color: #2c7da0;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        .contact-info {
+            background: #eef4ff;
+            border-radius: 16px;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+        .contact-info p {
+            margin: 0.3rem 0;
+        }
+        .service-charge {
+            font-size: 0.8rem;
+            color: #b8860b;
+            font-weight: bold;
+            margin-top: 0.8rem;
+            text-align: center;
+            background: #fff2db;
+            padding: 0.4rem;
+            border-radius: 20px;
+        }
+        .placeholder {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            min-height: 250px;
+        }
+        .placeholder-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            opacity: 0.5;
+        }
+        .placeholder h4 {
+            color: #4a6e8a;
+            margin-bottom: 0.5rem;
+        }
+        .placeholder p {
+            color: #6c8eaa;
+            font-size: 0.9rem;
+        }
+        .footer {
+            background: #0f1a24;
+            color: #8899aa;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+        .footer a {
+            color: #8899aa;
+            margin: 0 0.5rem;
+            text-decoration: none;
+        }
+        @media (max-width: 900px) {
+            .portal-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 600px) {
+            .portal-grid {
+                grid-template-columns: 1fr;
+            }
+            .nav-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="/" class="logo">JobLynk.live</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about.html">About</a>
+            <a href="/contact.html">Contact</a>
+            <a href="/pay-portal.html">Pay Portal</a>
+            <a href="/leader.html">Leader</a>
+            <a href="/blog.html">Blog</a>
+            <a href="/privacy.html">Privacy</a>
+            <a href="/terms.html">Terms</a>
+        </div>
+    </div>
+</nav>
+<div class="header">
+    <h1>🏢 Employers Portal</h1>
+    <p>Post job openings • Find verified talent • Direct employer connections</p>
+</div>
+<div class="container">
+    <div class="portal-grid">
+        <!-- Frame 1: Hungary Jobs -->
+        <div class="frame">
+            <h3>🇭🇺 Jobs in Hungary</h3>
+            <div class="job-list">
+                <ul>
+                    <li><strong>City:</strong> Budapest (Capital)</li>
+                    <li><strong>3 Waiters</strong></li>
+                    <li><strong>2 Cooks (Indian)</strong></li>
+                    <li><strong>1 Assistant Manager</strong></li>
+                    <li><strong>1 Chef (Continental)</strong></li>
+                </ul>
+                <div class="contact-info">
+                    <p><strong>📞 Urgent Openings</strong></p>
+                    <p>Contact: <strong>Sudhir Tiwari</strong></p>
+                    <p>📱 Cel: <a href="tel:+917058150484">70581 50484</a></p>
+                </div>
+                <div class="service-charge">
+                    ⚠️ Placement Agent – Service Charges Applicable
+                </div>
+            </div>
+        </div>
+
+        <!-- Frame 2 (Row 1, Col 2) – Placeholder -->
+        <div class="frame placeholder">
+            <div class="placeholder-icon">📌</div>
+            <h4>Your Job Here</h4>
+            <p>Post your vacancies<br>Contact us for details</p>
+            <a href="/contact.html" style="margin-top: 0.8rem; display: inline-block;">Submit Opening →</a>
+        </div>
+
+        <!-- Frame 3 (Row 1, Col 3) – Placeholder -->
+        <div class="frame placeholder">
+            <div class="placeholder-icon">🌍</div>
+            <h4>International Roles</h4>
+            <p>Middle East • Europe • Cruise Lines</p>
+            <a href="/contact.html" style="margin-top: 0.8rem; display: inline-block;">Enquire Now</a>
+        </div>
+
+        <!-- Frame 4 (Row 2, Col 1) – Placeholder -->
+        <div class="frame placeholder">
+            <div class="placeholder-icon">🏨</div>
+            <h4>Luxury Hotels</h4>
+            <p>India • Dubai • Maldives</p>
+            <a href="/contact.html" style="margin-top: 0.8rem; display: inline-block;">List Openings</a>
+        </div>
+
+        <!-- Frame 5 (Row 2, Col 2) – Placeholder -->
+        <div class="frame placeholder">
+            <div class="placeholder-icon">🚢</div>
+            <h4>Cruise Line Jobs</h4>
+            <p>Deck • Engine • F&B • Housekeeping</p>
+            <a href="/contact.html" style="margin-top: 0.8rem; display: inline-block;">View Opportunities</a>
+        </div>
+
+        <!-- Frame 6 (Row 2, Col 3) – Placeholder -->
+        <div class="frame placeholder">
+            <div class="placeholder-icon">💻</div>
+            <h4>Tech & IT Roles</h4>
+            <p>Remote • Hybrid • Onsite</p>
+            <a href="/contact.html" style="margin-top: 0.8rem; display: inline-block;">Add Job Post</a>
+        </div>
+
+        <!-- Frame 7 (Row 3, Col 1) – Placeholder -->
+        <div class="frame placeholder">
+            <div class="placeholder-icon">📊</div>
+            <h4>Sales & Marketing</h4>
+            <p>B2B • B2C • Digital Marketing</p>
+            <a href="/contact.html" style="margin-top: 0.8rem; display: inline-block;">Advertise Role</a>
+        </div>
+
+        <!-- Frame 8 (Row 3, Col 2) – Placeholder -->
+        <div class="frame placeholder">
+            <div class="placeholder-icon">🔧</div>
+            <h4>Engineering & Maintenance</h4>
+            <p>Hotels • Cruise • Industrial</p>
+            <a href="/contact.html" style="margin-top: 0.8rem; display: inline-block;">Submit Vacancy</a>
+        </div>
+
+        <!-- Frame 9 (Row 3, Col 3) – Placeholder -->
+        <div class="frame placeholder">
+            <div class="placeholder-icon">📞</div>
+            <h4>Become a Partner</h4>
+            <p>Recruitment agents • HR consultancies</p>
+            <a href="/contact.html" style="margin-top: 0.8rem; display: inline-block;">Collaborate</a>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <p>© 2026 JobLynk.live – Bridging Jobs & Talent</p>
+    <p><a href="/privacy.html">Privacy</a> | <a href="/terms.html">Terms</a> | <a href="/contact.html">Contact</a></p>
+</div>
+</body>
+</html>
