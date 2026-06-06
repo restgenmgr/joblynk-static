@@ -1,117 +1,12 @@
-<<<<<<< HEAD
 ﻿import React from "react";
 
 const About = () => {
-  return (
-    <div style={{ padding: "20px", fontFamily: "Segoe UI, sans-serif" }}>
-      
-      <h1>About JobLynk.live</h1>
-      <p>Your Partner in Executive Career Growth & Talent Acquisition</p>
-
-      <h2>🎯 Our Mission</h2>
-      <p>
-        JobLynk.live bridges the gap between executive talent and career opportunities
-        in hospitality, maritime, and professional services across India, the Middle East,
-        and global markets.
-      </p>
-
-      <h2>👨‍💼 For Job Seekers & Candidates</h2>
-      <ul>
-        <li>14 Executive Sector Guides</li>
-        <li>Professional Resume & Cover Letter</li>
-        <li>Daily HR / Employer Leads</li>
-        <li>Free Industry Resources</li>
-      </ul>
-
-      <h2>🏢 For HR Professionals & Employers</h2>
-      <ul>
-        <li>Direct Access to Active Candidates</li>
-        <li>Verified HR Data</li>
-        <li>Partnership Opportunities</li>
-      </ul>
-
-      <h2>🤝 Free & Paid Resources</h2>
-      <ul>
-        <li>Free: Career guides, SOP manual</li>
-        <li>Paid: Resume writing + HR leads</li>
-      </ul>
-
-      <h2>📞 Contact</h2>
-      <p>Email: joblynklive@gmail.com</p>
-      <p>WhatsApp: +91 9769351231</p>
-
-      <h2>Our Team</h2>
-      <p><strong>Nigel A Thomas</strong> – Web Design & Owner</p>
-      <p><strong>Das Suburaj</strong> – Data Analyst & Support</p>
-
-    </div>
+  return React.createElement("div", { style: { maxWidth: "1200px", margin: "0 auto", padding: "2rem" } },
+    React.createElement("h1", null, "About JobLynk.live"),
+    React.createElement("p", null, React.createElement("strong", null, "JobLynk.live"), " is a premier digital platform dedicated to bridging the gap between executive talent and career opportunities in the hospitality and maritime industries across India, the Middle East, and international markets."),
+    React.createElement("p", null, React.createElement("strong", null, "Founded by hospitality executive Nigel Thomas"), ", our mission is to provide Indian professionals with comprehensive career guides, industry insights, salary benchmarks, and direct connections to top employers."),
+    React.createElement("p", null, "We cover ", React.createElement("strong", null, "14 executive sectors"), " including Cruise Line Operations, Luxury Hotels, Middle East Hospitality, F&B Management, Front Office, Housekeeping, Culinary Arts, Revenue Management, HR, Engineering, Maritime Deck & Engine, Wellness, and Retail & Casino.")
   );
 };
-=======
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>About JobLynk.live</title>
-<style>
-body{font-family:Arial;background:#f0f4f8;padding:20px;}
-.container{max-width:1000px;margin:0 auto;background:white;padding:30px;border-radius:16px;}
-h1{color:#0f2b3d;}
-h2{color:#1e4a6e;border-left:4px solid #2c7da0;padding-left:15px;margin:20px 0;}
-.sector-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px;margin:20px 0;}
-.sector{background:#eef4ff;padding:10px;border-radius:10px;}
-.package{background:#f8fafc;padding:20px;border-radius:12px;margin:20px 0;text-align:center;}
-.price{font-size:28px;font-weight:bold;color:#1e4a6e;}
-.btn{background:#2c7da0;color:white;padding:10px 20px;border-radius:25px;text-decoration:none;display:inline-block;}
-.btn-gold{background:#d4a017;}
-</style>
-</head>
-<body>
-<div class="container">
-<h1>About JobLynk.live</h1>
 
-<p><strong>JobLynk.live</strong> is a premier digital platform dedicated to bridging the gap between executive talent and career opportunities in the hospitality and maritime industries across India, the Middle East, and international markets.</p>
-
-<p><strong>Founded by hospitality executive Nigel Thomas</strong>, our mission is to provide Indian professionals with comprehensive career guides, industry insights, salary benchmarks, and direct connections to top employers.</p>
-
-<p>We cover <strong>14 executive sectors</strong> including Cruise Line Operations, Luxury Hotels, Middle East Hospitality, F&B Management, Front Office, Housekeeping, Culinary Arts, Revenue Management, HR, Engineering, Maritime Deck & Engine, Wellness, and Retail & Casino.</p>
-
-<h2>📌 14 Executive Sectors We Cover</h2>
-<div class="sector-list">
-<div class="sector">🚢 Cruise Line Operations</div>
-<div class="sector">🏨 Luxury Hotels - India</div>
-<div class="sector">🕌 Middle East Hospitality</div>
-<div class="sector">🍽️ F&B Management</div>
-<div class="sector">⭐ Front Office Excellence</div>
-<div class="sector">🧹 Housekeeping Admin</div>
-<div class="sector">👨‍🍳 Culinary Arts</div>
-<div class="sector">📊 Revenue & Sales</div>
-<div class="sector">👥 HR & Training</div>
-<div class="sector">🔧 Engineering & Tech</div>
-<div class="sector">⚓ Maritime Deck Dept</div>
-<div class="sector">⚙️ Maritime Engine Dept</div>
-<div class="sector">💆 Wellness & Spa</div>
-<div class="sector">🛍️ Retail & Casino</div>
-</div>
-
-<h2>💰 Career Packages</h2>
-<div class="package">
-<h3>⚪ White Package - ₹49</h3>
-<p>Tailored Resume + Cover Letter<br>20+ HR / Employer Contacts<br>Valid for 4 weeks</p>
-<a href="https://wa.me/919769351231?text=I%20want%20White%20Package%20₹49" class="btn">Order on WhatsApp →</a>
-</div>
-
-<div class="package">
-<h3>🌟 Gold Package - ₹99</h3>
-<p>Everything in White Package<br><strong>20+ NEW Leads Daily (Mon-Fri)</strong><br>5 Days of Fresh Data</p>
-<a href="https://wa.me/919769351231?text=I%20want%20Gold%20Package%20₹99" class="btn btn-gold">Order on WhatsApp →</a>
-</div>
->>>>>>> da21f551115d75d321c5d9e55ce3aed19aec25ba
-
-<h2>📞 Contact</h2>
-<p>📧 <a href="mailto:joblynklive@gmail.com">joblynklive@gmail.com</a></p>
-<p>📱 WhatsApp: +91 9769351231</p>
-<p><a href="/">← Back to Home</a></p>
-</div>
-</body>
-</html>
+export default About;
