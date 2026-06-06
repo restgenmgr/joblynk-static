@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 
 const Support = () => {
   return (
@@ -20,10 +20,10 @@ const Support = () => {
 
         {/* Technical Support */}
         <div style={{ padding: '30px', border: '1px solid #333', borderRadius: '15px', background: 'rgba(255,255,255,0.02)' }}>
-          <h3 style={{ color: '#fbbf24', marginTop: 0 }}>Candidate Support</h3>
-          <p><strong>Das Suburaj</strong></p>
-          <p>Phone: +91 83693 72112</p>
-          <p>Email: das8369372112@gmail.com</p>
+          <h3 style={{ color: '#fbbf24', marginTop: 0 }}>Data & Fulfillment</h3>
+          <p><strong>N.A. Thomas</strong></p>
+          <p>Phone: +91 97693 51231</p>
+          <p>Email: napt1952@gmail.com</p>
           <p style={{ fontSize: '0.8rem', color: '#666' }}>Data & Fulfillment</p>
         </div>
       </div>
