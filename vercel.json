@@ -1,9 +1,17 @@
 ﻿{
   "version": 2,
-  "builds": [
-    { "src": "*.html", "use": "@vercel/static" }
-  ],
   "routes": [
-    { "src": "/(.*)", "dest": "/" }
+    {
+      "src": "/ats-resume-format-hospitality-2026.html",
+      "dest": "/ats-resume-format-hospitality-2026.html"
+    },
+    {
+      "src": "/blog/(.*)",
+      "dest": "/blog/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
   ]
 }
