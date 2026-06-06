@@ -1,9 +1,17 @@
-﻿{
+cd C:\Users\admin\Desktop\joblynk-article
+
+# Update the vercel.json file
+@'
+{
   "version": 2,
   "routes": [
     {
       "src": "/ats-resume-format-hospitality-2026.html",
       "dest": "/ats-resume-format-hospitality-2026.html"
+    },
+    {
+      "src": "/100-hospitality-interview-questions.html",
+      "dest": "/100-hospitality-interview-questions.html"
     },
     {
       "src": "/blog/(.*)",
@@ -15,3 +23,4 @@
     }
   ]
 }
+'@ | Out-File -FilePath vercel.json -Encoding utf8
