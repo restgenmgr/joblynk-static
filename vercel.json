@@ -1,29 +1,22 @@
 {
   "version": 2,
   "routes": [
-    {
-      "src": "/best-ats-resume-format-hospitality-2026.html",
-      "dest": "/best-ats-resume-format-hospitality-2026.html"
-    },
-    {
-      "src": "/100-hospitality-interview-questions.html",
-      "dest": "/100-hospitality-interview-questions.html"
-    },
-    {
-      "src": "/joblynk_seo_bulk_generator.html",
-      "dest": "/joblynk_seo_bulk_generator.html"
-    },
-    {
-      "src": "/ats-resume-format-hospitality-2026.html",
-      "dest": "/best-ats-resume-format-hospitality-2026.html"
-    },
-    {
-      "src": "/blog/(.*)",
-      "dest": "/blog/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
+    {"src": "/how-to-write-a-winning-resume.html", "dest": "/how-to-write-a-winning-resume.html"},
+    {"src": "/top-interview-tips-for-freshers.html", "dest": "/top-interview-tips-for-freshers.html"},
+    {"src": "/remote-jobs-guide-india.html", "dest": "/remote-jobs-guide-india.html"},
+    {"src": "/linkedin-profile-optimization.html", "dest": "/linkedin-profile-optimization.html"},
+    {"src": "/highest-paying-jobs-india-2025.html", "dest": "/highest-paying-jobs-india-2025.html"},
+    {"src": "/cover-letter-writing-guide.html", "dest": "/cover-letter-writing-guide.html"},
+    {"src": "/career-change-at-30-guide.html", "dest": "/career-change-at-30-guide.html"},
+    {"src": "/freelancing-vs-full-time-employment.html", "dest": "/freelancing-vs-full-time-employment.html"},
+    {"src": "/salary-negotiation-tips.html", "dest": "/salary-negotiation-tips.html"},
+    {"src": "/skills-in-demand-india-2025.html", "dest": "/skills-in-demand-india-2025.html"},
+    {"src": "/sitemap.xml", "dest": "/sitemap.xml"},
+    {"src": "/best-ats-resume-format-hospitality-2026.html", "dest": "/best-ats-resume-format-hospitality-2026.html"},
+    {"src": "/100-hospitality-interview-questions.html", "dest": "/100-hospitality-interview-questions.html"},
+    {"src": "/joblynk_seo_bulk_generator.html", "dest": "/joblynk_seo_bulk_generator.html"},
+    {"src": "/ats-resume-format-hospitality-2026.html", "dest": "/best-ats-resume-format-hospitality-2026.html"},
+    {"src": "/blog/(.*)", "dest": "/blog/$1"},
+    {"src": "/(.*)", "dest": "/index.html"}
   ]
 }
