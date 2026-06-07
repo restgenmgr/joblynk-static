@@ -3,10 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JobLynk.live</title>
+    <title>JobLynk.live | Hospitality Career Platform</title>
+    <meta name="description" content="JobLynk.live connects hospitality professionals with top hotels, resorts, and restaurants in India. Free resources, interview tips, and job search guides.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; line-height: 1.6; color: #1f2937; background: #f9fafb; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        header { background: linear-gradient(135deg, #0b3b3f 0%, #1a6d73 100%); color: white; padding: 80px 20px; text-align: center; }
+        header h1 { font-size: 2.5rem; margin-bottom: 15px; }
+        header p { font-size: 1.2rem; opacity: 0.9; max-width: 700px; margin: 0 auto; }
+        nav { background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 15px 0; position: sticky; top: 0; z-index: 100; }
+        nav .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; }
+        .logo { font-size: 1.5rem; font-weight: bold; color: #0b3b3f; text-decoration: none; }
+        .nav-links { display: flex; gap: 25px; flex-wrap: wrap; }
+        .nav-links a { color: #4b5563; text-decoration: none; font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover { color: #1a6d73; }
+        .btn { display: inline-block; background: #1a6d73; color: white; padding: 12px 30px; border-radius: 30px; text-decoration: none; font-weight: 600; margin-top: 20px; transition: background 0.2s; }
+        .btn:hover { background: #0b3b3f; }
+        .section { padding: 60px 0; border-bottom: 1px solid #e5e7eb; }
+        .section h2 { font-size: 1.8rem; color: #0b3b3f; margin-bottom: 30px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); transition: transform 0.2s, box-shadow 0.2s; }
+        .card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .card h3 { color: #1a6d73; margin-bottom: 15px; font-size: 1.3rem; }
+        .card p { color: #6b7280; margin-bottom: 15px; }
+        .card a { color: #1a6d73; text-decoration: none; font-weight: 600; }
+        .card a:hover { text-decoration: underline; }
+        .blog-list { list-style: none; }
+        .blog-list li { margin-bottom: 12px; padding: 12px 15px; background: white; border-radius: 8px; transition: background 0.2s; }
+        .blog-list li:hover { background: #f0fdf4; }
+        .blog-list a { font-weight: 500; color: #0b3b3f; text-decoration: none; display: block; }
+        .blog-list a:hover { color: #1a6d73; }
+        footer { background: #1f2937; color: #9ca3af; text-align: center; padding: 40px 20px; margin-top: 40px; }
+        .badge { display: inline-block; background: #d1fae5; color: #065f46; padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; margin-bottom: 15px; }
+        @media (max-width: 768px) { header h1 { font-size: 1.8rem; } nav .container { flex-direction: column; } .grid { grid-template-columns: 1fr; } }
+    </style>
 </head>
 <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <nav>
+        <div class="container">
+            <a href="/" class="logo">JobLynk<span style="color:#1a6d73">.live</span></a>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="#resources">Resources</a>
+                <a href="#blog">Blog</a>
+                <a href="/about.html">About</a>
+                <a href="/contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <div class="badge">🚀 India's Hospitality Career Platform</div>
+        <h1>Your Hospitality Career Starts Here</h1>
+        <p>Connect with top hotels, resorts, and restaurants across India. Find expert resources, interview tips, and job search guides.</p>
+        <a href="#resources" class="btn">Explore Resources →</a>
+    </header>
+
+    <div class="container">
+        <section id="resources" class="section">
+            <h2>📚 Featured Resources</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>📄 ATS Resume Guide</h3>
+                    <p>Learn how to write a resume that passes AI screening. Free template for hospitality professionals.</p>
+                    <a href="/best-ats-resume-format-hospitality-2026.html">Read more →</a>
+                </div>
+                <div class="card">
+                    <h3>🎤 100 Interview Q&A</h3>
+                    <p>Real interview questions with expert answers. Ace your next hotel or restaurant interview.</p>
+                    <a href="/100-hospitality-interview-questions.html">Read more →</a>
+                </div>
+                <div class="card">
+                    <h3>🛠️ SEO Bulk Generator</h3>
+                    <p>Create 10 SEO-optimized articles instantly. Perfect for content marketing.</p>
+                    <a href="/joblynk_seo_bulk_generator.html">Use tool →</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog" class="section">
+            <h2>📝 Latest Blog Articles</h2>
+            <ul class="blog-list">
+                <li><a href="/best-ats-resume-format-hospitality-2026.html">📄 Best ATS Resume Format for Hospitality Jobs in 2026</a></li>
+                <li><a href="/100-hospitality-interview-questions.html">🎤 100 Hospitality Interview Questions & Answers</a></li>
+                <li><a href="/remote-jobs-guide-india.html">🏠 Complete Guide to Remote Jobs in India</a></li>
+                <li><a href="/top-interview-tips-for-freshers.html">💡 Top Interview Tips for Freshers</a></li>
+                <li><a href="/salary-negotiation-tips.html">💰 Salary Negotiation Tips to Get Paid What You Deserve</a></li>
+                <li><a href="/skills-in-demand-india-2025.html">📈 Top Skills in Demand in India for 2025</a></li>
+                <li><a href="/career-change-at-30-guide.html">🔄 Career Change at 30: A Practical Guide</a></li>
+                <li><a href="/joblynk_seo_bulk_generator.html">🛠️ SEO Bulk Article Generator Tool</a></li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>🏆 Why JobLynk?</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>10,000+ Jobs</h3>
+                    <p>Curated listings from top employers across India.</p>
+                </div>
+                <div class="card">
+                    <h3>50,000+ Candidates</h3>
+                    <p>Trusted by job seekers nationwide.</p>
+                </div>
+                <div class="card">
+                    <h3>Free Resources</h3>
+                    <p>Resume templates, interview guides, and career tips.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 JobLynk.live — Empowering hospitality careers in India.</p>
+        <p style="margin-top: 10px; font-size: 0.8rem;">Follow us for daily job updates and career tips</p>
+    </footer>
 </body>
 </html>
