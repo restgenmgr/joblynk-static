@@ -1,4 +1,34 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "public": true
 }
+=======
+  "routes": [
+    {
+      "src": "/best-ats-resume-format-hospitality-2026.html",
+      "dest": "/best-ats-resume-format-hospitality-2026.html"
+    },
+    {
+      "src": "/100-hospitality-interview-questions.html",
+      "dest": "/100-hospitality-interview-questions.html"
+    },
+    {
+      "src": "/joblynk_seo_bulk_generator.html",
+      "dest": "/joblynk_seo_bulk_generator.html"
+    },
+    {
+      "src": "/ats-resume-format-hospitality-2026.html",
+      "dest": "/best-ats-resume-format-hospitality-2026.html"
+    },
+    {
+      "src": "/blog/(.*)",
+      "dest": "/blog/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+}
+>>>>>>> origin/main

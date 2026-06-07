@@ -1,0 +1,49 @@
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+
+const Blog = () => {
+  const [showForm, setShowForm] = useState(false);
+
+  const posts = [
+    { slug: "tech-boom", title: "India’s Tech Job Boom", category: "TECH", author: "Admin", date: "April 21, 2026" },
+    { slug: "remote-hybrid", title: "Remote vs Hybrid vs Office", category: "TECH", author: "Admin", date: "April 20, 2026" },
+    { slug: "interview-mastery", title: "Modern Interview Mastery", category: "TECH", author: "Admin", date: "April 19, 2026" },
+    { slug: "upskilling-roadmap", title: "Upskilling Roadmap", category: "TECH", author: "Admin", date: "April 18, 2026" },
+    { slug: "hidden-job-market", title: "The Hidden Job Market", category: "TECH", author: "Admin", date: "April 17, 2026" },
+    { slug: "digital-marketing-careers", title: "Digital Marketing Careers", category: "NON-TECH", author: "Admin", date: "April 16, 2026" },
+    { slug: "sales-b2b-careers", title: "Sales & B2B Careers", category: "NON-TECH", author: "Admin", date: "April 15, 2026" },
+    { slug: "hr-recruitment-careers", title: "HR & Recruitment", category: "NON-TECH", author: "Admin", date: "April 14, 2026" },
+    { slug: "operations-logistics-careers", title: "Operations & Logistics", category: "NON-TECH", author: "Admin", date: "April 13, 2026" },
+    { slug: "finance-accounting-careers", title: "Finance & Accounting", category: "NON-TECH", author: "Admin", date: "April 12, 2026" }
+  ];
+
+  return (
+    <div style={{ padding: '60px 5%', background: '#0a0a0f', minHeight: '100vh', color: 'white', fontFamily: 'sans-serif' }}>
+      <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '40px' }}>
+          <h1 style={{ color: '#fbbf24', margin: 0 }}>JOBS-LINKED <span style={{color: '#fff'}}>BLOG</span></h1>
+          <button onClick={() => setShowForm(!showForm)} style={{ padding: '10px 20px', background: '#fbbf24', border: 'none', fontWeight: 'bold', cursor: 'pointer', borderRadius: '5px' }}>
+            {showForm ? 'CLOSE' : 'SUBMIT POST'}
+          </button>
+        </div>
+
+        <div style={{ display: 'grid', gap: '30px' }}>
+          {posts.map((post, index) => (
+            <div key={index} style={{ padding: '30px', background: 'rgba(255,255,255,0.02)', border: '1px solid #333', borderRadius: '12px' }}>
+              <span style={{ fontSize: '0.75rem', color: '#fbbf24', fontWeight: 'bold' }}>{post.category}</span>
+              <h2 style={{ margin: '15px 0' }}>{post.title}</h2>
+              <Link to={`/blog/${post.slug}`} style={{ color: '#fbbf24', fontWeight: 'bold', textDecoration: 'none', border: '1px solid #fbbf24', padding: '8px 15px', borderRadius: '5px', display: 'inline-block' }}>
+                READ FULL ARTICLE →
+              </Link>
+              <div style={{ marginTop: '20px', fontSize: '0.85rem', color: '#475569' }}>
+                By {post.author} | {post.date}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Blog;

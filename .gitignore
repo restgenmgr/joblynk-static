@@ -1,1 +1,7 @@
+<<<<<<< HEAD
 .vercel
+=======
+﻿node_modules
+dist
+.env
+>>>>>>> origin/main
