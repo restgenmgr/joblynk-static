@@ -2,20 +2,11 @@
   "version": 2,
   "routes": [
     {
-      "src": "/ats-resume-keywords-guide-2026.html",
-      "dest": "/ats-resume-keywords-guide-2026.html"
+      "handle": "filesystem"
     },
     {
-      "src": "/best-ats-resume-format-hospitality-2026.html",
-      "dest": "/best-ats-resume-format-hospitality-2026.html"
-    },
-    {
-      "src": "/100-hospitality-interview-questions.html",
-      "dest": "/100-hospitality-interview-questions.html"
-    },
-    {
-      "src": "/about.html",
-      "dest": "/about.html"
+      "src": "/.*\\.html$",
+      "dest": "/$0"
     },
     {
       "src": "/(.*)",
