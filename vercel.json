@@ -1,12 +1,18 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "*.html",
-      "use": "@vercel/static"
-    }
-  ],
   "routes": [
+    {
+      "src": "/pay",
+      "dest": "/pay.html"
+    },
+    {
+      "src": "/pay.html",
+      "dest": "/pay.html"
+    },
+    {
+      "src": "/about-complete.html",
+      "dest": "/about-complete.html"
+    },
     {
       "src": "/(.*)",
       "dest": "/$1"
