@@ -1,44 +1,4 @@
-cd C:\Users\admin\joblynklive
-
-# Update index.html with founder bio
-$indexContent = Get-Content index.html -Raw
-
-$founderSection = @'
-        <!-- Founder Section with Full Bio -->
-        <section class="section">
-            <h2>👨‍💼 Meet Our Founder</h2>
-            <div class="grid">
-                <div class="card" style="text-align: center;">
-                    <h3>Nigel Thomas</h3>
-                    <p style="color: #1a6d73; font-weight: 500;">Hospitality Trainer & Professional</p>
-                    <p>30+ years of executive experience on cruise ships, luxury resorts, and hotels across the Middle East, USA, and India.</p>
-                    <p style="margin-top: 15px;">🌐 <a href="https://nigelthomas.live" target="_blank">nigelthomas.live</a></p>
-                    <p style="margin-top: 10px; font-size: 0.9rem;">Expert in hospitality operations, talent development, and executive recruitment.</p>
-                </div>
-                <div class="card">
-                    <h3>🎓 Why Trust Nigel?</h3>
-                    <ul style="margin-left: 20px; color: #6b7280;">
-                        <li>30+ years global hospitality leadership</li>
-                        <li>Executive roles on premium cruise lines</li>
-                        <li>Resort management across USA & Middle East</li>
-                        <li>Hospitality training expert in India</li>
-                        <li>Career mentor to 10,000+ professionals</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-'@
-
-# Find the founder section and replace it
-if ($indexContent -match "Founded by hospitality executive") {
-    $indexContent = $indexContent -replace '(?<=Founded by hospitality executive.*?\.)', " JobLynk.live was founded by Nigel Thomas, a Hospitality Trainer & Professional with 30+ years of executive experience on cruise ships, luxury resorts, and hotels across the Middle East, USA, and India."
-}
-
-$indexContent | Out-File -FilePath index.html -Encoding utf8
-
-# Update about.html with complete founder bio
-@'
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -143,18 +103,16 @@ $indexContent | Out-File -FilePath index.html -Encoding utf8
         
         <div class="highlight">
             <h2 style="color:#92400e; margin-top:0;">🎯 Our Mission</h2>
-            <p style="font-size:1.1rem;">At JobLynk.live, we bridge the gap between employers, HR managers, and candidates. We help candidates prepare, upskill, and become better equipped when searching for jobs. Our platform empowers professionals with the knowledge, tools, and confidence to succeed in competitive interviews and career transitions.</p>
+            <p style="font-size:1.1rem;"><strong>JobLynk.live</strong> is a premier digital platform dedicated to bridging the gap between executive talent and career opportunities in the <strong>hospitality and maritime industries</strong> across India, the Middle East, and international markets.</p>
+            <p style="font-size:1.1rem; margin-top:15px;">At JobLynk.live, we bridge the gap between employers, HR managers, and candidates. We help candidates prepare, upskill, and become better equipped when searching for jobs.</p>
         </div>
-
-        <h2>Who We Are</h2>
-        <p>JobLynk.live is a premier digital platform dedicated to bridging the gap between executive talent and career opportunities in the <strong>hospitality and maritime industries</strong> across India, the Middle East, and international markets.</p>
 
         <div class="founder-card">
             <div class="founder-info">
                 <h2 style="margin-top: 0;">👨‍💼 Meet Our Founder</h2>
                 <h3 style="color: #0b3b3f; margin-bottom: 5px;">Nigel Thomas</h3>
                 <p style="color: #1a6d73; font-weight: 500; margin-bottom: 15px;">Hospitality Trainer & Professional</p>
-                <p><strong>30+ years of executive experience</strong> on cruise ships, luxury resorts, and hotels across the Middle East, USA, and India.</p>
+                <p><strong>30+ years of executive experience</strong> on cruise ships, luxury resorts, and hotels across the <strong>Middle East, USA, and India</strong>.</p>
                 <p style="margin-top: 15px;">🌐 <strong>Web Bio:</strong> <a href="https://nigelthomas.live" target="_blank">nigelthomas.live</a></p>
                 <p style="margin-top: 10px;">Expert in hospitality operations, talent development, executive recruitment, and career mentoring.</p>
             </div>
@@ -170,10 +128,9 @@ $indexContent | Out-File -FilePath index.html -Encoding utf8
             </div>
         </div>
 
-        <p>Founded by hospitality executive <strong>Nigel Thomas</strong>, a Hospitality Trainer & Professional with 30+ years of executive experience on cruise ships, luxury resorts, and hotels across the Middle East, USA, and India. Our mission is to provide Indian professionals with comprehensive career guides, industry insights, salary benchmarks, and direct connections to top employers.</p>
+        <p><strong>Founded by hospitality executive Nigel Thomas</strong>, our mission is to provide Indian professionals with comprehensive career guides, industry insights, salary benchmarks, and direct connections to top employers.</p>
 
-        <h2>What We Do</h2>
-        <p>We at JobLynk.live want to bridge the gap between the employer/HR managers and the candidates. We help candidates to prepare and be better equipped when searching for jobs. Whether you're a fresh graduate or an experienced executive, we provide the resources you need to succeed.</p>
+        <p>Nigel Thomas is a Hospitality Trainer & Professional with 30+ years of executive experience on cruise ships, luxury resorts, and hotels across the Middle East, USA, and India.</p>
 
         <h2>14 Executive Sectors We Cover</h2>
         <div class="sectors-grid">
@@ -201,15 +158,6 @@ $indexContent | Out-File -FilePath index.html -Encoding utf8
             <div class="stat-card"><h3>3</h3><p>Global Markets</p></div>
         </div>
 
-        <h2>For Employers & HR Managers</h2>
-        <p>Are you an employer looking for pre-screened, industry-ready talent? JobLynk.live connects you with qualified candidates who are prepared and equipped for executive roles in hospitality and maritime industries. <a href="/contact.html">Contact us</a> to learn about our recruitment solutions.</p>
-
-        <h2>For Candidates</h2>
-        <p>Looking to advance your career? Explore our <a href="/#resources">free resources</a> including ATS-friendly resume templates, interview guides, salary negotiation tips, and industry insights. <a href="/contact.html">Reach out</a> for personalized career guidance.</p>
-
-        <h2>Our Vision</h2>
-        <p>To become India's most trusted career partner for hospitality and maritime professionals, helping them find meaningful work and grow their careers while providing employers with exceptional talent.</p>
-
         <div style="text-align: center; margin-top: 40px;">
             <a href="/contact.html" class="btn">Get in Touch →</a>
             <a href="/#resources" class="btn" style="background: #4b5563; margin-left: 15px;">Explore Resources →</a>
@@ -234,12 +182,3 @@ $indexContent | Out-File -FilePath index.html -Encoding utf8
     </footer>
 </body>
 </html>
-'@ | Out-File -FilePath about.html -Encoding utf8
-
-# Add, commit, push
-git add index.html about.html
-git commit -m "Add complete founder bio: Nigel Thomas, 30+ years cruise ships, resorts in Middle East, USA, India"
-git push origin main
-
-Write-Host "✅ Both pages updated with complete founder bio!" -ForegroundColor Green
-<!-- Updated: June 8, 2026 -->
