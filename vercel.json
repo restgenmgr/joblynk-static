@@ -1,4 +1,4 @@
-{
+﻿{
   "version": 2,
   "routes": [
     {
@@ -6,16 +6,22 @@
       "dest": "/pay.html"
     },
     {
-      "src": "/pay.html",
-      "dest": "/pay.html"
-    },
-    {
       "src": "/about-complete.html",
       "dest": "/about-complete.html"
     },
     {
+      "src": "/ai-impact-2026-2027.html",
+      "dest": "/ai-impact-2026-2027.html"
+    },
+    {
       "src": "/(.*)",
       "dest": "/$1"
+    }
+  ],
+  "builds": [
+    {
+      "src": "*.html",
+      "use": "@vercel/static"
     }
   ]
 }
