@@ -1,69 +1,27 @@
-cd C:\Users\admin\joblynklive
-
-# First, backup the current sitemap
-Copy-Item sitemap.xml sitemap.xml.backup
-
-# Get all your HTML files dynamically
-$htmlFiles = Get-ChildItem -Filter "*.html" -File | Where-Object { $_.Name -notin @("404.html", "index.html") } | ForEach-Object { $_.Name }
-
-# Generate the new sitemap
-@'
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Main Pages -->
-  <url><loc>https://joblynklive.vercel.app/</loc><lastmod>2026-06-08</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
-  <url><loc>https://joblynklive.vercel.app/about.html</loc><lastmod>2026-06-08</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://joblynklive.vercel.app/contact.html</loc><lastmod>2026-06-08</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://joblynklive.vercel.app/support.html</loc><lastmod>2026-06-08</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://joblynklive.vercel.app/pay</loc><lastmod>2026-06-08</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  
-  <!-- Legal Pages -->
-  <url><loc>https://joblynklive.vercel.app/privacy.html</loc><lastmod>2026-06-08</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://joblynklive.vercel.app/terms.html</loc><lastmod>2026-06-08</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://joblynklive.vercel.app/refund.html</loc><lastmod>2026-06-08</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://joblynklive.vercel.app/disclaimer.html</loc><lastmod>2026-06-08</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  
-  <!-- ATS & Resume Articles -->
-  <url><loc>https://joblynklive.vercel.app/best-ats-resume-format-hospitality-2026.html</loc><lastmod>2026-06-08</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://joblynklive.vercel.app/ats-resume-format-hospitality-2026.html</loc><lastmod>2026-06-08</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://joblynklive.vercel.app/ats-resume-keywords-guide-2026.html</loc><lastmod>2026-06-08</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  
-  <!-- Core Blog Articles -->
-  <url><loc>https://joblynklive.vercel.app/100-hospitality-interview-questions.html</loc><lastmod>2026-06-08</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://joblynklive.vercel.app/joblynk_seo_bulk_generator.html</loc><lastmod>2026-06-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://joblynklive.vercel.app/remote-jobs-guide-india.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://joblynklive.vercel.app/top-interview-tips-for-freshers.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://joblynklive.vercel.app/salary-negotiation-tips.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://joblynklive.vercel.app/skills-in-demand-india-2025.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://joblynklive.vercel.app/career-change-at-30-guide.html</loc><lastmod>2026-06-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  
-  <!-- Career Guides -->
-  <url><loc>https://joblynklive.vercel.app/hotel-sop-manual.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://joblynklive.vercel.app/front-office-excellence.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://joblynklive.vercel.app/interview-mastery.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://joblynklive.vercel.app/upskilling-roadmap.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://joblynklive.vercel.app/hidden-job-market.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  
-  <!-- Industry Sectors -->
-  <url><loc>https://joblynklive.vercel.app/cruise-line-operations.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://joblynklive.vercel.app/luxury-hotels-india.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://joblynklive.vercel.app/middle-east-hospitality.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://joblynklive.vercel.app/fb-management.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://joblynklive.vercel.app/housekeeping-admin.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://joblynklive.vercel.app/culinary-arts.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://joblynklive.vercel.app/revenue-sales.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://joblynklive.vercel.app/hr-recruitment-careers.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://joblynklive.vercel.app/engineering-tech.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://joblynklive.vercel.app/maritime-deck.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://joblynklive.vercel.app/maritime-engine.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://joblynklive.vercel.app/wellness-spa.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://joblynklive.vercel.app/retail-casino.html</loc><lastmod>2026-06-06</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url>
+    <loc>https://joblynk.live/</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://joblynk.live/ai-impact-2026-2027.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://joblynk.live/100-hospitality-interview-questions.html</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://joblynk.live/best-ats-resume-format-hospitality-2026.html</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
-'@ | Out-File -FilePath sitemap.xml -Encoding utf8
-
-# Add, commit, and push
-git add sitemap.xml
-git commit -m "Update sitemap: Add ats-resume-keywords-guide-2026.html and all new content"
-git push origin main
-
-Write-Host "✅ Sitemap updated with new ATS keywords file!" -ForegroundColor Green
