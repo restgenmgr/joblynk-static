@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translate JobLynk.live</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; background: #1a0000; color: #fbbf24; }
+        button { background: #4a0000; color: #fbbf24; border: 2px solid #fbbf24; padding: 15px 30px; margin: 10px; border-radius: 10px; cursor: pointer; font-size: 16px; }
+        button:hover { background: #fbbf24; color: #1a0000; }
+        .container { max-width: 600px; margin: auto; }
+        a { color: #fbbf24; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌐 Select Your Language</h1>
+        <button onclick="translateSite('en')">🇬🇧 English</button>
+        <button onclick="translateSite('hi')">🇮🇳 हिन्दी</button>
+        <button onclick="translateSite('ta')">🇮🇳 தமிழ்</button>
+        <button onclick="translateSite('te')">🇮🇳 తెలుగు</button>
+        <button onclick="translateSite('fr')">🇫🇷 Français</button>
+        <button onclick="translateSite('es')">🇪🇸 Español</button>
+        <button onclick="translateSite('de')">🇩🇪 Deutsch</button>
+        <button onclick="translateSite('zh-CN')">🇨🇳 中文</button>
+        <p><br><a href="/">← Back to JobLynk.live</a></p>
+    </div>
+    <div id="google_translate_element" style="display:none;"></div>
+    <script>
+        function translateSite(lang) {
+            if (lang === 'en') {
+                window.location.href = '/';
+                return;
+            }
+            var div = document.createElement('div');
+            div.id = 'google_translate_element';
+            document.body.appendChild(div);
+            var script = document.createElement('script');
+            script.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+            document.body.appendChild(script);
+            window.googleTranslateElementInit = function() {
+                new google.translate.TranslateElement({
+                    pageLanguage: 'en',
+                    includedLanguages: lang
+                }, 'google_translate_element');
+                setTimeout(function() {
+                    window.location.href = '/?googtrans=en|' + lang;
+                }, 500);
+            };
+        }
+    </script>
+</body>
+</html>
