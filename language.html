@@ -20,14 +20,14 @@
             padding: 40px;
             border-radius: 20px;
             text-align: center;
-            max-width: 800px;
+            max-width: 900px;
             width: 100%;
         }
-        h1 { color: #fbbf24; margin-bottom: 10px; }
+        h1 { color: #fbbf24; margin-bottom: 10px; font-size: 2rem; }
         .subtitle { color: #d4b896; margin-bottom: 30px; }
         .lang-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
             gap: 12px;
             margin-bottom: 30px;
         }
@@ -35,10 +35,11 @@
             background: #4a0000;
             color: #fbbf24;
             border: 2px solid #fbbf24;
-            padding: 12px;
+            padding: 14px;
             border-radius: 10px;
             cursor: pointer;
             font-size: 16px;
+            font-weight: bold;
             transition: all 0.3s;
         }
         .lang-btn:hover {
@@ -46,38 +47,40 @@
             color: #1a0000;
             transform: scale(1.02);
         }
-        .back-link { color: #d4b896; text-decoration: none; }
+        .back-link { color: #d4b896; text-decoration: none; display: inline-block; margin-top: 20px; }
         .back-link:hover { color: #fbbf24; }
         hr { border-color: #4a0000; margin: 20px 0; }
+        .note { color: #d4b896; font-size: 12px; margin-top: 20px; }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>🌐 Select Your Language</h1>
-        <p class="subtitle">Choose a language to translate the entire website</p>
+        <p class="subtitle">Click a language to translate the entire website</p>
         
         <div class="lang-grid">
             <button class="lang-btn" onclick="translateSite('en')">🇬🇧 English</button>
-            <button class="lang-btn" onclick="translateSite('hi')">🇮🇳 Hindi - हिन्दी</button>
-            <button class="lang-btn" onclick="translateSite('ta')">🇮🇳 Tamil - தமிழ்</button>
-            <button class="lang-btn" onclick="translateSite('te')">🇮🇳 Telugu - తెలుగు</button>
-            <button class="lang-btn" onclick="translateSite('mr')">🇮🇳 Marathi - मराठी</button>
-            <button class="lang-btn" onclick="translateSite('bn')">🇮🇳 Bengali - বাংলা</button>
-            <button class="lang-btn" onclick="translateSite('ur')">🇮🇳 Urdu - اردو</button>
-            <button class="lang-btn" onclick="translateSite('fr')">🇫🇷 French - Français</button>
-            <button class="lang-btn" onclick="translateSite('es')">🇪🇸 Spanish - Español</button>
-            <button class="lang-btn" onclick="translateSite('de')">🇩🇪 German - Deutsch</button>
-            <button class="lang-btn" onclick="translateSite('it')">🇮🇹 Italian - Italiano</button>
-            <button class="lang-btn" onclick="translateSite('pt')">🇵🇹 Portuguese - Português</button>
-            <button class="lang-btn" onclick="translateSite('ru')">🇷🇺 Russian - Русский</button>
-            <button class="lang-btn" onclick="translateSite('zh-CN')">🇨🇳 Chinese - 中文</button>
-            <button class="lang-btn" onclick="translateSite('ja')">🇯🇵 Japanese - 日本語</button>
-            <button class="lang-btn" onclick="translateSite('ko')">🇰🇷 Korean - 한국어</button>
-            <button class="lang-btn" onclick="translateSite('ar')">🇸🇦 Arabic - العربية</button>
+            <button class="lang-btn" onclick="translateSite('hi')">🇮🇳 Hindi</button>
+            <button class="lang-btn" onclick="translateSite('ta')">🇮🇳 Tamil</button>
+            <button class="lang-btn" onclick="translateSite('te')">🇮🇳 Telugu</button>
+            <button class="lang-btn" onclick="translateSite('mr')">🇮🇳 Marathi</button>
+            <button class="lang-btn" onclick="translateSite('bn')">🇮🇳 Bengali</button>
+            <button class="lang-btn" onclick="translateSite('ur')">🇮🇳 Urdu</button>
+            <button class="lang-btn" onclick="translateSite('fr')">🇫🇷 French</button>
+            <button class="lang-btn" onclick="translateSite('es')">🇪🇸 Spanish</button>
+            <button class="lang-btn" onclick="translateSite('de')">🇩🇪 German</button>
+            <button class="lang-btn" onclick="translateSite('it')">🇮🇹 Italian</button>
+            <button class="lang-btn" onclick="translateSite('pt')">🇵🇹 Portuguese</button>
+            <button class="lang-btn" onclick="translateSite('ru')">🇷🇺 Russian</button>
+            <button class="lang-btn" onclick="translateSite('zh-CN')">🇨🇳 Chinese</button>
+            <button class="lang-btn" onclick="translateSite('ja')">🇯🇵 Japanese</button>
+            <button class="lang-btn" onclick="translateSite('ko')">🇰🇷 Korean</button>
+            <button class="lang-btn" onclick="translateSite('ar')">🇸🇦 Arabic</button>
         </div>
         
         <hr>
         <a href="/" class="back-link">← Back to JobLynk.live</a>
+        <p class="note">Powered by Google Translate | Translation may take a few seconds</p>
     </div>
 
     <script>
@@ -86,6 +89,12 @@
                 window.location.href = '/';
                 return;
             }
+            // Show loading indicator on the clicked button
+            const btn = event.target;
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '⏳ Translating...';
+            btn.disabled = true;
+            
             // Redirect to Google Translate
             window.location.href = 'https://translate.google.com/translate?sl=en&tl=' + lang + '&u=' + encodeURIComponent('https://joblynk.live');
         }
