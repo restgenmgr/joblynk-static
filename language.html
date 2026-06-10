@@ -5,48 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Translate JobLynk.live</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; background: #1a0000; color: #fbbf24; }
-        button { background: #4a0000; color: #fbbf24; border: 2px solid #fbbf24; padding: 15px 30px; margin: 10px; border-radius: 10px; cursor: pointer; font-size: 16px; }
-        button:hover { background: #fbbf24; color: #1a0000; }
-        .container { max-width: 600px; margin: auto; }
-        a { color: #fbbf24; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background: #1a0000;
+            color: #fbbf24;
+        }
+        button {
+            background: #4a0000;
+            color: #fbbf24;
+            border: 2px solid #fbbf24;
+            padding: 15px 30px;
+            margin: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #fbbf24;
+            color: #1a0000;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+        a {
+            color: #fbbf24;
+        }
+        .loading {
+            display: none;
+            margin-top: 20px;
+            color: #fbbf24;
+        }
+        .lang-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin: 30px 0;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>🌐 Select Your Language</h1>
-        <button onclick="translateSite('en')">🇬🇧 English</button>
-        <button onclick="translateSite('hi')">🇮🇳 हिन्दी</button>
-        <button onclick="translateSite('ta')">🇮🇳 தமிழ்</button>
-        <button onclick="translateSite('te')">🇮🇳 తెలుగు</button>
-        <button onclick="translateSite('fr')">🇫🇷 Français</button>
-        <button onclick="translateSite('es')">🇪🇸 Español</button>
-        <button onclick="translateSite('de')">🇩🇪 Deutsch</button>
-        <button onclick="translateSite('zh-CN')">🇨🇳 中文</button>
+        <p>Click a language to translate the entire website</p>
+        
+        <div class="lang-grid">
+            <button onclick="translateSite('en')">🇬🇧 English</button>
+            <button onclick="translateSite('hi')">🇮🇳 हिन्दी</button>
+            <button onclick="translateSite('ta')">🇮🇳 தமிழ்</button>
+            <button onclick="translateSite('te')">🇮🇳 తెలుగు</button>
+            <button onclick="translateSite('mr')">🇮🇳 मराठी</button>
+            <button onclick="translateSite('bn')">🇮🇳 বাংলা</button>
+            <button onclick="translateSite('fr')">🇫🇷 Français</button>
+            <button onclick="translateSite('es')">🇪🇸 Español</button>
+            <button onclick="translateSite('de')">🇩🇪 Deutsch</button>
+            <button onclick="translateSite('it')">🇮🇹 Italiano</button>
+            <button onclick="translateSite('pt')">🇵🇹 Português</button>
+            <button onclick="translateSite('ru')">🇷🇺 Русский</button>
+            <button onclick="translateSite('zh-CN')">🇨🇳 中文</button>
+            <button onclick="translateSite('ja')">🇯🇵 日本語</button>
+            <button onclick="translateSite('ko')">🇰🇷 한국어</button>
+            <button onclick="translateSite('ar')">🇸🇦 العربية</button>
+        </div>
+        
         <p><br><a href="/">← Back to JobLynk.live</a></p>
+        <div id="loading" class="loading">⏳ Translating, please wait...</div>
     </div>
-    <div id="google_translate_element" style="display:none;"></div>
+
     <script>
         function translateSite(lang) {
             if (lang === 'en') {
                 window.location.href = '/';
                 return;
             }
-            var div = document.createElement('div');
-            div.id = 'google_translate_element';
-            document.body.appendChild(div);
-            var script = document.createElement('script');
-            script.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-            document.body.appendChild(script);
-            window.googleTranslateElementInit = function() {
-                new google.translate.TranslateElement({
-                    pageLanguage: 'en',
-                    includedLanguages: lang
-                }, 'google_translate_element');
-                setTimeout(function() {
-                    window.location.href = '/?googtrans=en|' + lang;
-                }, 500);
-            };
+            document.getElementById('loading').style.display = 'block';
+            localStorage.setItem('preferredLanguage', lang);
+            window.location.href = 'https://translate.google.com/translate?sl=en&tl=' + lang + '&u=' + encodeURIComponent(window.location.origin);
         }
     </script>
 </body>
