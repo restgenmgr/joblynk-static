@@ -89,12 +89,6 @@
                 window.location.href = '/';
                 return;
             }
-            // Show loading indicator on the clicked button
-            const btn = event.target;
-            const originalText = btn.innerHTML;
-            btn.innerHTML = '⏳ Translating...';
-            btn.disabled = true;
-            
             // Redirect to Google Translate
             window.location.href = 'https://translate.google.com/translate?sl=en&tl=' + lang + '&u=' + encodeURIComponent('https://joblynk.live');
         }
