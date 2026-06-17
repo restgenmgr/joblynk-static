@@ -1,79 +1,125 @@
+# Update contact.html with proper emojis
+@'
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CLRRV5DMXZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-CLRRV5DMXZ');
-</script>
-
-<!-- Google AdSense -->
-<meta name="google-adsense-account" content="ca-pub-4282121192943910">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4282121192943910"
-     crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us � JobLynk.live</title>
+    <title>Contact Us | JobLynk.live</title>
+    <meta name="description" content="Get in touch with JobLynk.live for career guidance, employer partnerships, or general inquiries. We're here to help you succeed.">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CLRRV5DMXZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-CLRRV5DMXZ');
+    </script>
     <meta name="google-adsense-account" content="ca-pub-4282121192943910">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4282121192943910" crossorigin="anonymous"></script>
     <style>
-        *{margin:0;padding:0;box-sizing:border-box;}
-        body{font-family:'Segoe UI',Roboto,sans-serif;background:#f0f4f8;color:#1a2a3a;line-height:1.6;}
-        .navbar{background:#0f2b3d;padding:1rem 0;position:sticky;top:0;z-index:1000;}
-        .nav-container{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:0 20px;flex-wrap:wrap;}
-        .logo{color:white;font-size:1.5rem;font-weight:bold;text-decoration:none;}
-        .nav-links{display:flex;gap:1.5rem;flex-wrap:wrap;}
-        .nav-links a{color:white;text-decoration:none;padding:8px 16px;border-radius:8px;}
-        .nav-links a:hover{background:#2c7da0;}
-        .container{max-width:800px;margin:2rem auto;padding:0 20px;}
-        .content-card{background:white;border-radius:20px;padding:2rem;box-shadow:0 8px 30px rgba(0,0,0,0.08);}
-        h1{color:#0f2b3d;margin-bottom:1rem;}
-        .contact-info{margin:1.5rem 0;}
-        .contact-item{padding:0.8rem;border-bottom:1px solid #eef4ff;}
-        .contact-item strong{display:inline-block;width:140px;color:#1e4a6e;}
-        .whatsapp-btn{display:inline-block;background:#25D366;color:white;padding:12px 24px;border-radius:8px;text-decoration:none;margin-top:1rem;}
-        .footer{background:#0f1a24;color:#8899aa;text-align:center;padding:2rem;margin-top:2rem;}
-        .footer a{color:#8899aa;margin:0 0.5rem;text-decoration:none;}
-        @media(max-width:768px){.nav-container{flex-direction:column;gap:10px;}.nav-links{justify-content:center;}.contact-item strong{width:auto;display:block;}}
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; line-height: 1.6; background: #1a0000; color: #d4b896; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        nav { background: #2d0000; padding: 15px 0; position: sticky; top: 0; z-index: 100; }
+        nav .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; }
+        .logo { font-size: 1.5rem; font-weight: bold; color: #fbbf24; text-decoration: none; }
+        .nav-links { display: flex; gap: 20px; flex-wrap: wrap; }
+        .nav-links a { color: #f5e6c8; text-decoration: none; font-weight: 500; }
+        .nav-links a:hover { color: #1a6d73; }
+        .hero { background: linear-gradient(135deg, #4a0000 0%, #800000 100%); color: white; padding: 60px 20px; text-align: center; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 15px; }
+        .content { padding: 40px 0; }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .card { background: #2d0000; padding: 30px; border-radius: 16px; }
+        .card h2 { color: #fbbf24; margin-bottom: 20px; }
+        label { display: block; margin: 15px 0 5px; font-weight: 500; }
+        input, textarea, select { width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #4a0000; background: #1a0000; color: #f5e6c8; font-size: 1rem; }
+        button { background: #fbbf24; color: #1a0000; padding: 14px 30px; border: none; border-radius: 30px; font-weight: 600; cursor: pointer; margin-top: 20px; font-size: 1rem; }
+        button:hover { background: #4a0000; color: #fbbf24; }
+        .info-item { margin: 15px 0; display: flex; align-items: center; gap: 12px; }
+        .info-item .icon { font-size: 1.5rem; width: 40px; text-align: center; }
+        .btn { display: inline-block; background: #fbbf24; color: #1a0000; padding: 12px 30px; border-radius: 30px; text-decoration: none; font-weight: 600; }
+        .btn:hover { background: #4a0000; color: #fbbf24; }
+        footer { background: #0d0000; color: #d4b896; text-align: center; padding: 40px 20px; margin-top: 40px; }
+        .footer-links a { color: #d4b896; text-decoration: none; margin: 0 10px; }
+        @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } .hero h1 { font-size: 1.8rem; } nav .container { flex-direction: column; } }
     </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="/" class="logo">JobLynk.live</a>
+    <nav>
+        <div class="container">
+            <a href="/" class="logo">JobLynk<span style="color:#1a6d73">.live</span></a>
             <div class="nav-links">
                 <a href="/">Home</a>
                 <a href="/about.html">About</a>
+                <a href="/blog.html">Blog</a>
                 <a href="/contact.html">Contact</a>
-                <a href="/support.html">Support</a>
                 <a href="/privacy.html">Privacy</a>
                 <a href="/terms.html">Terms</a>
             </div>
         </div>
     </nav>
-    <div class="container">
-        <div class="content-card">
-            <h1>Contact Us</h1>
-            <p>Have questions about career opportunities, partnerships, or need assistance? Reach out to us using the information below.</p>
-            <div class="contact-info">
-                <div class="contact-item"><strong>?? General Inquiries:</strong> joblynklive@gmail.com</div>
-                <div class="contact-item"><strong>?? HR / Recruitment:</strong> napt1952@gmail.com</div>
-                <div class="contact-item"><strong>?? HR / Recruitment:</strong> restgenmgr1952@gmail.com</div>
-                <div class="contact-item"><strong>?? Phone:</strong> +91 9769351231</div>
-                <div class="contact-item"><strong>?? WhatsApp:</strong> +91 9769351231</div>
+
+    <div class="hero">
+        <h1>📞 Contact Us</h1>
+        <p>We're here to help you succeed in your career journey</p>
+    </div>
+
+    <div class="container content">
+        <div class="contact-grid">
+            <div class="card">
+                <h2>Send a Message</h2>
+                <form action="https://formspree.io/f/xpznvgjq" method="POST">
+                    <label>Your Name *</label>
+                    <input type="text" name="name" required>
+                    <label>Email Address *</label>
+                    <input type="email" name="email" required>
+                    <label>Subject</label>
+                    <select name="subject">
+                        <option value="career">Career Guidance</option>
+                        <option value="employer">Employer Partnership</option>
+                        <option value="support">Technical Support</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <label>Message *</label>
+                    <textarea name="message" rows="5" required></textarea>
+                    <button type="submit">Send Message →</button>
+                </form>
             </div>
-            <a href="https://wa.me/919769351231" class="whatsapp-btn" target="_blank">?? Chat on WhatsApp</a>
-            <p style="margin-top:1.5rem; color:#666;">Response time: Usually within 24-48 hours.</p>
+            <div>
+                <div class="card">
+                    <h2>📌 Contact Information</h2>
+                    <div class="info-item"><span class="icon">📧</span> <span><strong>General Inquiries:</strong> joblynklive@gmail.com</span></div>
+                    <div class="info-item"><span class="icon">👔</span> <span><strong>HR / Recruitment:</strong> napt1952@gmail.com</span></div>
+                    <div class="info-item"><span class="icon">🏢</span> <span><strong>HR / Recruitment:</strong> restgenmgr1952@gmail.com</span></div>
+                    <div class="info-item"><span class="icon">📞</span> <span><strong>Phone:</strong> +91 9769351231</span></div>
+                    <div class="info-item"><span class="icon">💬</span> <span><strong>WhatsApp:</strong> +91 9769351231</span></div>
+                </div>
+                <div class="card" style="margin-top:20px;">
+                    <h2>🕒 Response Time</h2>
+                    <p>We strive to respond to all inquiries within <strong>24-48 hours</strong> during business days.</p>
+                    <p style="margin-top:10px;">📌 For urgent matters, please include "URGENT" in your subject line.</p>
+                </div>
+                <div class="card" style="margin-top:20px; text-align:center;">
+                    <a href="/about.html" class="btn">About Our Founder →</a>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="footer">
-        <p>� 2025 JobLynk.live � Bridging Jobs & Talent</p>
-        <p><a href="/privacy.html">Privacy</a> | <a href="/terms.html">Terms</a> | <a href="/contact.html">Contact</a> | <a href="/support.html">Support</a></p>
-    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="/about.html">About</a>
+            <a href="/contact.html">Contact</a>
+            <a href="/privacy.html">Privacy</a>
+            <a href="/terms.html">Terms</a>
+            <a href="/sitemap.xml">Sitemap</a>
+        </div>
+        <p>© 2026 JobLynk.live — Contact Us</p>
+    </footer>
 </body>
 </html>
+'@ | Out-File -FilePath "contact.html" -Encoding UTF8
 
-
+Write-Host "✅ Updated: contact.html with proper emojis" -ForegroundColor Green
