@@ -1,39 +1,85 @@
+# Navigate to your folder
+cd C:\Users\admin\Desktop\joblynk-static
+
+# Generate fresh sitemap.xml
+$today = Get-Date -Format "yyyy-MM-dd"
+$sitemap = @'
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://joblynk.live/</loc>
+        <lastmod>'$today'</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://joblynk.live/about.html</loc>
+        <lastmod>'$today'</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://joblynk.live/contact.html</loc>
+        <lastmod>'$today'</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://joblynk.live/blog.html</loc>
+        <lastmod>'$today'</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://joblynk.live/privacy.html</loc>
+        <lastmod>'$today'</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.4</priority>
+    </url>
+    <url>
+        <loc>https://joblynk.live/terms.html</loc>
+        <lastmod>'$today'</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.4</priority>
+    </url>
+    <url>
+        <loc>https://joblynk.live/disclaimer.html</loc>
+        <lastmod>'$today'</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://joblynk.live/refund.html</loc>
+        <lastmod>'$today'</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://joblynk.live/support.html</loc>
+        <lastmod>'$today'</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+'@
 
-  <url>
-    <loc>https://joblynk.live/</loc>
-    <lastmod>2026-06-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+# Add all blog posts
+Get-ChildItem -Path . -Filter "*.html" -Recurse | Where-Object {
+    $_.Name -match "guide|tips|career|interview|resume|skills|jobs|salary|remote|freelancing|hospitality|operations|finance|marketing|engineering|upskilling|cruise|culinary|front-office|housekeeping|hotel|hr|maritime|retail|sales|tech|ai-impact|cover-letter|linkedin|career-change" -and
+    $_.Name -notmatch "index|about|contact|privacy|terms|disclaimer|404|payment|support|refund|placeholder|backup|react|blog"
+} | ForEach-Object {
+    $sitemap += @"
+    <url>
+        <loc>https://joblynk.live/$($_.Name)</loc>
+        <lastmod>$today</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+"@
+}
 
-  <url>
-    <loc>https://joblynk.live/ai-impact-2026-2027.html</loc>
-    <lastmod>2026-06-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://joblynk.live/100-hospitality-interview-questions.html</loc>
-    <lastmod>2026-06-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://joblynk.live/best-ats-resume-format-hospitality-2026.html</loc>
-    <lastmod>2026-06-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://joblynk.live/india-tourism-market-2026.html</loc>
-    <lastmod>2026-06-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
+$sitemap += @'
 </urlset>
+'@
+
+$sitemap | Out-File -FilePath "sitemap.xml" -Encoding UTF8
+Write-Host "✅ Updated: sitemap.xml" -ForegroundColor Green
