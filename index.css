@@ -299,15 +299,17 @@ header p{
     margin:auto;
     padding:0 30px;
 }
-
-.hero-badge{
+.badge{
     display:inline-block;
-    background:#f4c542;
-    color:#111;
-    padding:10px 22px;
-    border-radius:40px;
-    font-weight:700;
-    margin-bottom:25px;
+    background:#ffffff;
+    color:#0b2d2f;
+    border:2px solid #ffd34d;
+    padding:8px 20px;
+    border-radius:30px;
+    margin-bottom:20px;
+    font-weight:bold;
+    box-shadow:0 4px 12px rgba(0,0,0,.15);
+
 }
 
 .hero h1{
