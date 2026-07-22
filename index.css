@@ -1,5 +1,5 @@
 /* =====================================================
-   JOBLYNK.LIVE v2.0
+   JOBLYNK.LIVE
    PROFESSIONAL HOMEPAGE
 ===================================================== */
 
@@ -40,93 +40,67 @@ body{
 
 a{
     text-decoration:none;
-    transition:.3s;
 }
 
-img{
-    max-width:100%;
-    display:block;
-}
-
-/* ==========================
-   HEADER
-========================== */
-
-.top-header{
-
-    background:#0b2d2f;
-
-    position:sticky;
-
-    top:0;
-
-    z-index:9999;
-
-    box-shadow:0 4px 20px rgba(0,0,0,.15);
-
-}
-
-.top-header .container{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    padding:18px 0;
-
-}
-
-/* ==========================
-   LOGO
-========================== */
-
-.logo{
-
-    font-size:34px;
-
-    font-weight:700;
-
-    color:#ffffff;
-
-    letter-spacing:1px;
-
-}
-
-.logo span{
-
-    color:#f4c542;
-
+ul{
+    list-style:none;
 }
 
 /* ==========================
    NAVIGATION
 ========================== */
 
-nav ul{
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:#082b2d;
+    z-index:9999;
+    box-shadow:0 4px 18px rgba(0,0,0,.15);
+}
+
+nav .container{
 
     display:flex;
-
+    justify-content:space-between;
     align-items:center;
+    padding:18px 0;
 
-    list-style:none;
+}
 
+.logo{
+
+    font-size:34px;
+    font-weight:800;
+    color:#ffffff;
+
+}
+
+.logo span{
+
+    color:#19b2b2;
+
+}
+
+.nav-links{
+
+    display:flex;
+    align-items:center;
     gap:28px;
 
 }
 
-nav a{
+.nav-links a{
 
     color:#ffffff;
-
-    font-size:15px;
-
+    font-size:16px;
     font-weight:600;
+    transition:.3s;
 
 }
 
-nav a:hover{
+.nav-links a:hover{
 
     color:#f4c542;
 
@@ -135,20 +109,16 @@ nav a:hover{
 .translate-btn{
 
     background:#f4c542;
-
-    color:#111;
-
+    color:#111 !important;
     padding:10px 18px;
-
     border-radius:30px;
-
     font-weight:bold;
 
 }
 
 .translate-btn:hover{
 
-    background:#ffd966;
+    background:#ffd867;
 
 }
 
@@ -158,7 +128,14 @@ nav a:hover{
 
 .hero{
 
-    background:url("hotel.jpg") center center/cover no-repeat;
+    margin-top:78px;
+
+    background:
+    linear-gradient(rgba(7,41,45,.72),rgba(7,41,45,.72)),
+    url("../images/hotel.jpg");
+
+    background-size:cover;
+    background-position:center;
 
     min-height:700px;
 
@@ -166,58 +143,42 @@ nav a:hover{
 
 .hero-overlay{
 
-    background:rgba(0,0,0,.60);
-
     min-height:700px;
 
     display:flex;
-
     align-items:center;
 
 }
 
 .hero-content{
 
-    max-width:700px;
+    max-width:760px;
 
 }
 
-.hero-badge{
+.hero-top{
 
-    display:inline-block;
-
-    background:#ffffff;
-
-    color:#0b2d2f;
-
-    padding:10px 22px;
-
-    border-radius:40px;
-
-    font-weight:700;
-
-    margin-bottom:25px;
+    color:#f4c542;
+    font-size:18px;
+    letter-spacing:1px;
+    margin-bottom:20px;
 
 }
 
 .hero h1{
 
     color:#ffffff;
-
-    font-size:64px;
-
+    font-size:72px;
     line-height:1.1;
-
-    margin-bottom:25px;
+    margin-bottom:28px;
+    font-weight:800;
 
 }
 
-.hero p{
+.hero-text{
 
-    color:#f2f2f2;
-
+    color:#eeeeee;
     font-size:22px;
-
     margin-bottom:40px;
 
 }
@@ -229,108 +190,152 @@ nav a:hover{
 .hero-buttons{
 
     display:flex;
-
     gap:20px;
-
     flex-wrap:wrap;
+
+}
+
+.btn{
+
+    display:inline-block;
+    padding:18px 36px;
+    border-radius:40px;
+    font-size:17px;
+    font-weight:bold;
+    transition:.3s;
 
 }
 
 .btn-primary{
 
     background:#f4c542;
-
     color:#111;
-
-    padding:16px 34px;
-
-    border-radius:40px;
-
-    font-weight:bold;
 
 }
 
 .btn-primary:hover{
 
-    background:#ffd966;
+    background:#ffd867;
+    transform:translateY(-3px);
 
 }
 
 .btn-secondary{
 
     border:2px solid #ffffff;
-
     color:#ffffff;
-
-    padding:16px 34px;
-
-    border-radius:40px;
-
-    font-weight:bold;
 
 }
 
 .btn-secondary:hover{
 
     background:#ffffff;
-
-    color:#111;
+    color:#111111;
+    transform:translateY(-3px);
 
 }
 /* =====================================================
-   MAIN CONTENT SECTIONS
+   JOB SEARCH
 ===================================================== */
 
-.section{
-    padding:90px 0;
+.job-search{
+
+    background:#ffffff;
+    padding:80px 0;
+    text-align:center;
+
 }
 
-.section h2{
+.job-search h2{
+
+    font-size:42px;
+    color:#082b2d;
+    margin-bottom:15px;
+
+}
+
+.job-search p{
+
+    color:#666;
+    font-size:18px;
+    margin-bottom:40px;
+
+}
+
+.search-form{
+
+    display:grid;
+    grid-template-columns:2fr 2fr 2fr 1fr;
+    gap:15px;
+
+}
+
+.search-form input,
+.search-form select{
+
+    padding:18px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    font-size:16px;
+
+}
+
+.search-form button{
+
+    background:#19b2b2;
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:bold;
+    transition:.3s;
+
+}
+
+.search-form button:hover{
+
+    background:#0d8d8d;
+
+}
+
+/* =====================================================
+   HOSPITALITY SECTORS
+===================================================== */
+
+.sectors{
+
+    background:#eef5f6;
+    padding:90px 0;
+
+}
+
+.sectors h2{
+
     text-align:center;
     font-size:42px;
-    color:#0b2d2f;
-    margin-bottom:15px;
-}
+    color:#082b2d;
+    margin-bottom:50px;
 
-.section-intro{
-    text-align:center;
-    color:#666;
-    max-width:800px;
-    margin:0 auto 60px;
-    font-size:18px;
 }
-
-.light{
-    background:#eef5f6;
-}
-
-/* =====================================================
-   FEATURED SECTORS
-===================================================== */
 
 .sector-grid{
 
     display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
     gap:30px;
 
 }
 
 .sector-card{
 
-    background:#ffffff;
-
+    background:#fff;
     padding:35px;
-
-    border-radius:16px;
-
+    border-radius:18px;
     text-align:center;
-
-    box-shadow:0 12px 28px rgba(0,0,0,.08);
-
+    box-shadow:0 12px 25px rgba(0,0,0,.08);
     transition:.35s;
+    font-size:18px;
 
 }
 
@@ -338,24 +343,12 @@ nav a:hover{
 
     transform:translateY(-8px);
 
-    box-shadow:0 20px 40px rgba(0,0,0,.15);
-
-}
-
-.sector-card .icon{
-
-    font-size:52px;
-
-    margin-bottom:20px;
-
 }
 
 .sector-card h3{
 
-    color:#0b2d2f;
-
-    margin-bottom:15px;
-
+    margin:20px 0 12px;
+    color:#082b2d;
     font-size:24px;
 
 }
@@ -364,57 +357,57 @@ nav a:hover{
 
     color:#666;
 
-    font-size:16px;
-
 }
 
 /* =====================================================
-   FEATURES GRID
+   FEATURED EMPLOYERS
 ===================================================== */
 
-.features-grid{
+.employers{
+
+    padding:90px 0;
+    background:#ffffff;
+
+}
+
+.employers h2{
+
+    text-align:center;
+    font-size:42px;
+    color:#082b2d;
+    margin-bottom:50px;
+
+}
+
+.employer-grid{
 
     display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:30px;
 
 }
 
-.feature-box{
+.employer-card{
 
-    background:#fff;
-
+    background:#082b2d;
+    color:#ffffff;
     padding:35px;
-
-    border-radius:16px;
-
-    box-shadow:0 10px 24px rgba(0,0,0,.08);
-
+    border-radius:18px;
+    text-align:center;
     transition:.3s;
 
 }
 
-.feature-box:hover{
+.employer-card:hover{
 
-    transform:translateY(-6px);
-
-}
-
-.feature-box h3{
-
-    color:#0b2d2f;
-
-    margin-bottom:18px;
+    background:#19b2b2;
 
 }
 
-.feature-box p{
+.employer-card h3{
 
-    color:#555;
-
-    line-height:1.8;
+    margin-bottom:15px;
+    font-size:24px;
 
 }
 
@@ -424,10 +417,8 @@ nav a:hover{
 
 .stats{
 
-    background:#0b2d2f;
-
+    background:linear-gradient(135deg,#082b2d,#11676c);
     color:#ffffff;
-
     padding:90px 0;
 
 }
@@ -435,42 +426,59 @@ nav a:hover{
 .stats-grid{
 
     display:grid;
-
     grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-
     gap:30px;
-
     text-align:center;
 
 }
 
-.stat h2{
-
-    font-size:54px;
+.stats h2{
 
     color:#f4c542;
-
-    margin-bottom:12px;
+    font-size:56px;
+    margin-bottom:10px;
 
 }
 
-.stat p{
+.stats p{
 
     font-size:18px;
 
-    color:#f2f2f2;
-
 }
 /* =====================================================
-   FEATURED RESOURCES
+   LATEST RESOURCES
 ===================================================== */
+
+.resources{
+
+    background:#f7fafb;
+    padding:90px 0;
+
+}
+
+.resources h2{
+
+    text-align:center;
+    font-size:42px;
+    color:#082b2d;
+    margin-bottom:15px;
+
+}
+
+.section-intro{
+
+    max-width:800px;
+    margin:0 auto 60px;
+    text-align:center;
+    color:#666;
+    font-size:18px;
+
+}
 
 .resource-grid{
 
     display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
     gap:30px;
 
 }
@@ -478,13 +486,9 @@ nav a:hover{
 .resource-card{
 
     background:#ffffff;
-
     padding:35px;
-
-    border-radius:16px;
-
+    border-radius:18px;
     box-shadow:0 10px 25px rgba(0,0,0,.08);
-
     transition:.35s;
 
 }
@@ -493,16 +497,12 @@ nav a:hover{
 
     transform:translateY(-8px);
 
-    box-shadow:0 18px 40px rgba(0,0,0,.15);
-
 }
 
 .resource-card h3{
 
-    color:#0b2d2f;
-
-    margin-bottom:18px;
-
+    color:#082b2d;
+    margin-bottom:20px;
     font-size:24px;
 
 }
@@ -510,15 +510,14 @@ nav a:hover{
 .resource-card p{
 
     color:#666;
-
+    line-height:1.8;
     margin-bottom:25px;
 
 }
 
 .resource-card a{
 
-    color:#0b6b70;
-
+    color:#19b2b2;
     font-weight:bold;
 
 }
@@ -530,38 +529,69 @@ nav a:hover{
 }
 
 /* =====================================================
-   CALL TO ACTION
+   NEWSLETTER
 ===================================================== */
 
-.cta{
+.newsletter{
 
-    background:linear-gradient(135deg,#0b2d2f,#13656b);
-
+    background:linear-gradient(135deg,#082b2d,#11676c);
     color:#ffffff;
-
+    padding:90px 0;
     text-align:center;
-
-    padding:100px 20px;
 
 }
 
-.cta h2{
+.newsletter h2{
 
-    font-size:46px;
-
+    font-size:42px;
     margin-bottom:20px;
 
 }
 
-.cta p{
+.newsletter p{
 
-    font-size:20px;
-
-    max-width:750px;
-
+    max-width:700px;
     margin:0 auto 40px;
+    font-size:19px;
 
-    color:#f3f3f3;
+}
+
+.newsletter-form{
+
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+
+}
+
+.newsletter-form input{
+
+    width:420px;
+    max-width:100%;
+    padding:18px;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+
+}
+
+.newsletter-form button{
+
+    padding:18px 35px;
+    background:#f4c542;
+    color:#111;
+    border:none;
+    border-radius:8px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+.newsletter-form button:hover{
+
+    background:#ffd867;
 
 }
 
@@ -571,10 +601,8 @@ nav a:hover{
 
 footer{
 
-    background:#071d1f;
-
-    color:#dddddd;
-
+    background:#06191b;
+    color:#cccccc;
     padding:70px 0 30px;
 
 }
@@ -582,11 +610,8 @@ footer{
 .footer-grid{
 
     display:grid;
-
-    grid-template-columns:2fr 1fr 1fr;
-
-    gap:50px;
-
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:40px;
     margin-bottom:40px;
 
 }
@@ -594,7 +619,6 @@ footer{
 .footer-grid h3{
 
     color:#ffffff;
-
     margin-bottom:20px;
 
 }
@@ -619,7 +643,7 @@ footer{
 
 .footer-grid a{
 
-    color:#dddddd;
+    color:#cccccc;
 
 }
 
@@ -629,43 +653,19 @@ footer{
 
 }
 
-.copyright{
+footer hr{
 
+    border:none;
     border-top:1px solid rgba(255,255,255,.15);
-
-    margin-top:30px;
-
-    padding-top:25px;
-
-    text-align:center;
-
-    color:#aaaaaa;
-
-    font-size:14px;
+    margin:30px 0;
 
 }
 
-/* =====================================================
-   GOOGLE TRANSLATE
-===================================================== */
+.copyright{
 
-#google_translate_element{
-
-    position:fixed;
-
-    bottom:20px;
-
-    right:20px;
-
-    z-index:9999;
-
-    background:#ffffff;
-
-    padding:10px 14px;
-
-    border-radius:12px;
-
-    box-shadow:0 10px 30px rgba(0,0,0,.20);
+    text-align:center;
+    color:#999999;
+    font-size:14px;
 
 }
 /* =====================================================
@@ -674,223 +674,145 @@ footer{
 
 @media (max-width:992px){
 
-.top-header .container{
+    .container{
+        width:95%;
+    }
 
-flex-direction:column;
+    nav .container{
+        flex-direction:column;
+        gap:20px;
+    }
 
-gap:20px;
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:18px;
+    }
 
-}
+    .hero{
+        min-height:600px;
+    }
 
-nav ul{
+    .hero-overlay{
+        min-height:600px;
+    }
 
-flex-wrap:wrap;
+    .hero h1{
+        font-size:54px;
+    }
 
-justify-content:center;
+    .hero-text{
+        font-size:20px;
+    }
 
-gap:18px;
-
-}
-
-.hero{
-
-min-height:600px;
-
-}
-
-.hero-overlay{
-
-min-height:600px;
-
-}
-
-.hero h1{
-
-font-size:48px;
-
-}
-
-.hero p{
-
-font-size:20px;
+    .search-form{
+        grid-template-columns:1fr 1fr;
+    }
 
 }
-
-.footer-grid{
-
-grid-template-columns:1fr;
-
-text-align:center;
-
-}
-
-}
-
-/* =====================================================
-   MOBILE
-===================================================== */
 
 @media (max-width:768px){
 
-.container{
+    .hero{
+        min-height:520px;
+    }
 
-width:95%;
+    .hero-overlay{
+        min-height:520px;
+        text-align:center;
+    }
 
-}
+    .hero-content{
+        max-width:100%;
+    }
 
-.hero{
+    .hero h1{
+        font-size:40px;
+    }
 
-min-height:520px;
+    .hero-text{
+        font-size:18px;
+    }
 
-}
+    .hero-buttons{
+        justify-content:center;
+        flex-direction:column;
+        align-items:center;
+    }
 
-.hero-overlay{
+    .btn{
+        width:240px;
+        text-align:center;
+    }
 
-min-height:520px;
+    .search-form{
+        grid-template-columns:1fr;
+    }
 
-padding:40px 0;
+    .newsletter-form{
+        flex-direction:column;
+        align-items:center;
+    }
 
-}
-
-.hero-content{
-
-text-align:center;
-
-}
-
-.hero h1{
-
-font-size:36px;
-
-line-height:1.2;
-
-}
-
-.hero p{
-
-font-size:18px;
-
-}
-
-.hero-buttons{
-
-flex-direction:column;
-
-align-items:center;
-
-}
-
-.btn-primary,
-.btn-secondary{
-
-width:240px;
-
-text-align:center;
+    .newsletter-form input{
+        width:100%;
+    }
 
 }
-
-.section{
-
-padding:60px 0;
-
-}
-
-.section h2{
-
-font-size:32px;
-
-}
-
-.section-intro{
-
-font-size:16px;
-
-}
-
-.stat h2{
-
-font-size:42px;
-
-}
-
-}
-
-/* =====================================================
-   SMALL MOBILE
-===================================================== */
 
 @media (max-width:480px){
 
-.logo{
+    .logo{
+        font-size:28px;
+    }
 
-font-size:28px;
+    .hero h1{
+        font-size:32px;
+    }
 
-}
+    .hero-top{
+        font-size:15px;
+    }
 
-nav ul{
+    .hero-text{
+        font-size:16px;
+    }
 
-flex-direction:column;
+    .section-intro{
+        font-size:16px;
+    }
 
-gap:12px;
-
-}
-
-.hero h1{
-
-font-size:30px;
-
-}
-
-.hero p{
-
-font-size:16px;
-
-}
-
-.hero-badge{
-
-font-size:13px;
-
-padding:8px 16px;
-
-}
-
-.btn-primary,
-.btn-secondary{
-
-width:220px;
-
-padding:14px;
-
-}
+    .stats h2{
+        font-size:42px;
+    }
 
 }
 
 /* =====================================================
-   SIMPLE ANIMATIONS
+   ANIMATIONS
 ===================================================== */
 
 .sector-card,
-.feature-box,
+.employer-card,
 .resource-card{
 
-transition:all .35s ease;
+    transition:all .35s ease;
 
 }
 
-.btn-primary,
-.btn-secondary,
-.translate-btn{
+.btn,
+.search-form button,
+.newsletter-form button{
 
-transition:all .3s ease;
+    transition:all .30s ease;
 
 }
 
-.btn-primary:hover,
-.btn-secondary:hover,
-.translate-btn:hover{
+.btn:hover,
+.search-form button:hover,
+.newsletter-form button:hover{
 
-transform:translateY(-2px);
+    transform:translateY(-3px);
 
 }
 
@@ -900,9 +822,8 @@ transform:translateY(-2px);
 
 ::selection{
 
-background:#f4c542;
-
-color:#111;
+    background:#f4c542;
+    color:#111;
 
 }
 
@@ -912,26 +833,25 @@ color:#111;
 
 ::-webkit-scrollbar{
 
-width:10px;
+    width:10px;
 
 }
 
 ::-webkit-scrollbar-track{
 
-background:#ececec;
+    background:#eeeeee;
 
 }
 
 ::-webkit-scrollbar-thumb{
 
-background:#0b2d2f;
-
-border-radius:20px;
+    background:#0b2d2f;
+    border-radius:20px;
 
 }
 
 ::-webkit-scrollbar-thumb:hover{
 
-background:#13656b;
+    background:#11676c;
 
 }
