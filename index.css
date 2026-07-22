@@ -1,0 +1,858 @@
+
+/* =====================================================
+   JOBLYNK.LIVE
+   PROFESSIONAL HOMEPAGE
+===================================================== */
+
+/* ==========================
+   RESET
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f7f8;
+    color:#222;
+    line-height:1.7;
+}
+
+/* ==========================
+   CONTAINER
+========================== */
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* ==========================
+   LINKS
+========================== */
+
+a{
+    text-decoration:none;
+}
+
+ul{
+    list-style:none;
+}
+
+/* ==========================
+   NAVIGATION
+========================== */
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:#082b2d;
+    z-index:9999;
+    box-shadow:0 4px 18px rgba(0,0,0,.15);
+}
+
+nav .container{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+
+}
+
+.logo{
+
+    font-size:34px;
+    font-weight:800;
+    color:#ffffff;
+
+}
+
+.logo span{
+
+    color:#19b2b2;
+
+}
+
+.nav-links{
+
+    display:flex;
+    align-items:center;
+    gap:28px;
+
+}
+
+.nav-links a{
+
+    color:#ffffff;
+    font-size:16px;
+    font-weight:600;
+    transition:.3s;
+
+}
+
+.nav-links a:hover{
+
+    color:#f4c542;
+
+}
+
+.translate-btn{
+
+    background:#f4c542;
+    color:#111 !important;
+    padding:10px 18px;
+    border-radius:30px;
+    font-weight:bold;
+
+}
+
+.translate-btn:hover{
+
+    background:#ffd867;
+
+}
+
+/* ==========================
+   HERO
+========================== */
+
+.hero{
+
+    margin-top:78px;
+
+    background:
+    linear-gradient(rgba(7,41,45,.72),rgba(7,41,45,.72)),
+    url("../images/hotel.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    min-height:700px;
+
+}
+
+.hero-overlay{
+
+    min-height:700px;
+
+    display:flex;
+    align-items:center;
+
+}
+
+.hero-content{
+
+    max-width:760px;
+
+}
+
+.hero-top{
+
+    color:#f4c542;
+    font-size:18px;
+    letter-spacing:1px;
+    margin-bottom:20px;
+
+}
+
+.hero h1{
+
+    color:#ffffff;
+    font-size:72px;
+    line-height:1.1;
+    margin-bottom:28px;
+    font-weight:800;
+
+}
+
+.hero-text{
+
+    color:#eeeeee;
+    font-size:22px;
+    margin-bottom:40px;
+
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+
+.hero-buttons{
+
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+
+}
+
+.btn{
+
+    display:inline-block;
+    padding:18px 36px;
+    border-radius:40px;
+    font-size:17px;
+    font-weight:bold;
+    transition:.3s;
+
+}
+
+.btn-primary{
+
+    background:#f4c542;
+    color:#111;
+
+}
+
+.btn-primary:hover{
+
+    background:#ffd867;
+    transform:translateY(-3px);
+
+}
+
+.btn-secondary{
+
+    border:2px solid #ffffff;
+    color:#ffffff;
+
+}
+
+.btn-secondary:hover{
+
+    background:#ffffff;
+    color:#111111;
+    transform:translateY(-3px);
+
+}
+/* =====================================================
+   JOB SEARCH
+===================================================== */
+
+.job-search{
+
+    background:#ffffff;
+    padding:80px 0;
+    text-align:center;
+
+}
+
+.job-search h2{
+
+    font-size:42px;
+    color:#082b2d;
+    margin-bottom:15px;
+
+}
+
+.job-search p{
+
+    color:#666;
+    font-size:18px;
+    margin-bottom:40px;
+
+}
+
+.search-form{
+
+    display:grid;
+    grid-template-columns:2fr 2fr 2fr 1fr;
+    gap:15px;
+
+}
+
+.search-form input,
+.search-form select{
+
+    padding:18px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    font-size:16px;
+
+}
+
+.search-form button{
+
+    background:#19b2b2;
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:bold;
+    transition:.3s;
+
+}
+
+.search-form button:hover{
+
+    background:#0d8d8d;
+
+}
+
+/* =====================================================
+   HOSPITALITY SECTORS
+===================================================== */
+
+.sectors{
+
+    background:#eef5f6;
+    padding:90px 0;
+
+}
+
+.sectors h2{
+
+    text-align:center;
+    font-size:42px;
+    color:#082b2d;
+    margin-bottom:50px;
+
+}
+
+.sector-grid{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+
+}
+
+.sector-card{
+
+    background:#fff;
+    padding:35px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 12px 25px rgba(0,0,0,.08);
+    transition:.35s;
+    font-size:18px;
+
+}
+
+.sector-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.sector-card h3{
+
+    margin:20px 0 12px;
+    color:#082b2d;
+    font-size:24px;
+
+}
+
+.sector-card p{
+
+    color:#666;
+
+}
+
+/* =====================================================
+   FEATURED EMPLOYERS
+===================================================== */
+
+.employers{
+
+    padding:90px 0;
+    background:#ffffff;
+
+}
+
+.employers h2{
+
+    text-align:center;
+    font-size:42px;
+    color:#082b2d;
+    margin-bottom:50px;
+
+}
+
+.employer-grid{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+
+}
+
+.employer-card{
+
+    background:#082b2d;
+    color:#ffffff;
+    padding:35px;
+    border-radius:18px;
+    text-align:center;
+    transition:.3s;
+
+}
+
+.employer-card:hover{
+
+    background:#19b2b2;
+
+}
+
+.employer-card h3{
+
+    margin-bottom:15px;
+    font-size:24px;
+
+}
+
+/* =====================================================
+   STATISTICS
+===================================================== */
+
+.stats{
+
+    background:linear-gradient(135deg,#082b2d,#11676c);
+    color:#ffffff;
+    padding:90px 0;
+
+}
+
+.stats-grid{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+    text-align:center;
+
+}
+
+.stats h2{
+
+    color:#f4c542;
+    font-size:56px;
+    margin-bottom:10px;
+
+}
+
+.stats p{
+
+    font-size:18px;
+
+}
+/* =====================================================
+   LATEST RESOURCES
+===================================================== */
+
+.resources{
+
+    background:#f7fafb;
+    padding:90px 0;
+
+}
+
+.resources h2{
+
+    text-align:center;
+    font-size:42px;
+    color:#082b2d;
+    margin-bottom:15px;
+
+}
+
+.section-intro{
+
+    max-width:800px;
+    margin:0 auto 60px;
+    text-align:center;
+    color:#666;
+    font-size:18px;
+
+}
+
+.resource-grid{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+
+}
+
+.resource-card{
+
+    background:#ffffff;
+    padding:35px;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.35s;
+
+}
+
+.resource-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.resource-card h3{
+
+    color:#082b2d;
+    margin-bottom:20px;
+    font-size:24px;
+
+}
+
+.resource-card p{
+
+    color:#666;
+    line-height:1.8;
+    margin-bottom:25px;
+
+}
+
+.resource-card a{
+
+    color:#19b2b2;
+    font-weight:bold;
+
+}
+
+.resource-card a:hover{
+
+    color:#f4c542;
+
+}
+
+/* =====================================================
+   NEWSLETTER
+===================================================== */
+
+.newsletter{
+
+    background:linear-gradient(135deg,#082b2d,#11676c);
+    color:#ffffff;
+    padding:90px 0;
+    text-align:center;
+
+}
+
+.newsletter h2{
+
+    font-size:42px;
+    margin-bottom:20px;
+
+}
+
+.newsletter p{
+
+    max-width:700px;
+    margin:0 auto 40px;
+    font-size:19px;
+
+}
+
+.newsletter-form{
+
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+
+}
+
+.newsletter-form input{
+
+    width:420px;
+    max-width:100%;
+    padding:18px;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+
+}
+
+.newsletter-form button{
+
+    padding:18px 35px;
+    background:#f4c542;
+    color:#111;
+    border:none;
+    border-radius:8px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+.newsletter-form button:hover{
+
+    background:#ffd867;
+
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+
+    background:#06191b;
+    color:#cccccc;
+    padding:70px 0 30px;
+
+}
+
+.footer-grid{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:40px;
+    margin-bottom:40px;
+
+}
+
+.footer-grid h3{
+
+    color:#ffffff;
+    margin-bottom:20px;
+
+}
+
+.footer-grid p{
+
+    line-height:1.8;
+
+}
+
+.footer-grid ul{
+
+    list-style:none;
+
+}
+
+.footer-grid li{
+
+    margin-bottom:12px;
+
+}
+
+.footer-grid a{
+
+    color:#cccccc;
+
+}
+
+.footer-grid a:hover{
+
+    color:#f4c542;
+
+}
+
+footer hr{
+
+    border:none;
+    border-top:1px solid rgba(255,255,255,.15);
+    margin:30px 0;
+
+}
+
+.copyright{
+
+    text-align:center;
+    color:#999999;
+    font-size:14px;
+
+}
+/* =====================================================
+   RESPONSIVE DESIGN
+===================================================== */
+
+@media (max-width:992px){
+
+    .container{
+        width:95%;
+    }
+
+    nav .container{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:18px;
+    }
+
+    .hero{
+        min-height:600px;
+    }
+
+    .hero-overlay{
+        min-height:600px;
+    }
+
+    .hero h1{
+        font-size:54px;
+    }
+
+    .hero-text{
+        font-size:20px;
+    }
+
+    .search-form{
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .hero{
+        min-height:520px;
+    }
+
+    .hero-overlay{
+        min-height:520px;
+        text-align:center;
+    }
+
+    .hero-content{
+        max-width:100%;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .hero-text{
+        font-size:18px;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .btn{
+        width:240px;
+        text-align:center;
+    }
+
+    .search-form{
+        grid-template-columns:1fr;
+    }
+
+    .newsletter-form{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .newsletter-form input{
+        width:100%;
+    }
+
+}
+
+@media (max-width:480px){
+
+    .logo{
+        font-size:28px;
+    }
+
+    .hero h1{
+        font-size:32px;
+    }
+
+    .hero-top{
+        font-size:15px;
+    }
+
+    .hero-text{
+        font-size:16px;
+    }
+
+    .section-intro{
+        font-size:16px;
+    }
+
+    .stats h2{
+        font-size:42px;
+    }
+
+}
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+.sector-card,
+.employer-card,
+.resource-card{
+
+    transition:all .35s ease;
+
+}
+
+.btn,
+.search-form button,
+.newsletter-form button{
+
+    transition:all .30s ease;
+
+}
+
+.btn:hover,
+.search-form button:hover,
+.newsletter-form button:hover{
+
+    transform:translateY(-3px);
+
+}
+
+/* =====================================================
+   SELECTION
+===================================================== */
+
+::selection{
+
+    background:#f4c542;
+    color:#111;
+
+}
+
+/* =====================================================
+   SCROLLBAR
+===================================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#eeeeee;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#0b2d2f;
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#11676c;
+
+}
