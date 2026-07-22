@@ -51,14 +51,15 @@ nav .container{
 }
 
 .logo{
-    color:#0b2d2f;
+    color:#f4c542;
     text-decoration:none;
     font-size:32px;
     font-weight:700;
 }
-
 .logo span{
     color:#19a3a3;
+}
+
 }
 
 .nav-links{
